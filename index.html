@@ -17,7 +17,7 @@
   <script>
     const TELEGRAM_USERNAME = "";     // без @, пример: halol_daromad
     const TELEGRAM_INVITE_HASH = "btOyasLGzl40ZmJk";             // для закрытого канала: только код после https://t.me/+
-    const FB_PIXEL_ID = "PASTE_PIXEL_ID_HERE";   // пример: 123456789012345
+    const FB_PIXEL_ID = "2466520193866433";   // Meta Pixel ID
   </script>
 
   <!-- Facebook Pixel -->
@@ -40,6 +40,11 @@
       fbq('track', 'PageView');
     }
   </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2466520193866433&ev=PageView&noscript=1"
+      alt="" />
+  </noscript>
   <!-- /Facebook Pixel -->
 
   <style>
@@ -292,7 +297,10 @@
 
     function trackLead() {
       if (pixelIsReady()) {
-        fbq('track', 'Lead');
+        fbq('track', 'Lead', {
+          content_name: 'Telegram button click',
+          content_category: 'Telegram'
+        });
       }
     }
 
@@ -310,7 +318,7 @@
       // Окно «Разрешить открыть Telegram?» убрать нельзя — это защита браузера.
       setTimeout(function () {
         window.location.href = deepLink;
-      }, 220);
+      }, 450);
     }
 
     const openBtn = document.getElementById('openTelegram');
