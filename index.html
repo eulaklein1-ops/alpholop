@@ -16,7 +16,7 @@
   -->
   <script>
     const TELEGRAM_USERNAME = "";     // без @, пример: halol_daromad
-    const TELEGRAM_INVITE_HASH = "https://t.me/+btOyasLGzl40ZmJk";             // для закрытого канала: код после https://t.me/+
+    const TELEGRAM_INVITE_HASH = "btOyasLGzl40ZmJk";             // для закрытого канала: только код после https://t.me/+
     const FB_PIXEL_ID = "PASTE_PIXEL_ID_HERE";   // пример: 123456789012345
   </script>
 
@@ -234,7 +234,7 @@
       </div>
 
       <p class="note">
-        Тугмани босинг — Telegram очилади ва сиз каналга қўшилишингиз мумкин.
+        Тугмани босинг — Telegram иловаси очилади. Агар сўров чиқса, «Разрешить» ни босинг.
       </p>
 
       <img class="bottom-image" src="assets/photo.jpg" alt="">
@@ -243,19 +243,40 @@
 
   <script>
     function cleanInviteHash(hash) {
-      return String(hash || '').replace('https://t.me/+', '').replace('http://t.me/+', '').replace('+', '').replace('/', '').trim();
+      return String(hash || '')
+        .replace('https://t.me/+', '')
+        .replace('http://t.me/+', '')
+        .replace('tg://join?invite=', '')
+        .replace(/^\+/, '')
+        .replace(/\/$/, '')
+        .trim();
+    }
+
+    function cleanUsername(username) {
+      return String(username || '')
+        .replace('https://t.me/', '')
+        .replace('http://t.me/', '')
+        .replace('@', '')
+        .replace(/\/$/, '')
+        .trim();
     }
 
     function getTelegramWebUrl() {
       const invite = cleanInviteHash(TELEGRAM_INVITE_HASH);
+      const username = cleanUsername(TELEGRAM_USERNAME);
+
       if (invite) return 'https://t.me/+' + invite;
-      return 'https://t.me/' + String(TELEGRAM_USERNAME || '').replace('@', '').trim();
+      if (username) return 'https://t.me/' + username;
+      return 'https://telegram.org/dl';
     }
 
     function getTelegramDeepLink() {
       const invite = cleanInviteHash(TELEGRAM_INVITE_HASH);
+      const username = cleanUsername(TELEGRAM_USERNAME);
+
       if (invite) return 'tg://join?invite=' + invite;
-      return 'tg://resolve?domain=' + String(TELEGRAM_USERNAME || '').replace('@', '').trim();
+      if (username) return 'tg://resolve?domain=' + username;
+      return getTelegramWebUrl();
     }
 
     function getTelegramDownloadUrl() {
@@ -276,29 +297,32 @@
     }
 
     function openTelegram(event) {
-      event.preventDefault();
-      const deepLink = getTelegramDeepLink();
-      const webLink = getTelegramWebUrl();
+      if (event) event.preventDefault();
 
+      const deepLink = getTelegramDeepLink();
+
+      // 1) Сначала фиксируем Lead в Facebook Pixel, если пиксель вставлен.
       trackLead();
 
+      // 2) Открываем сразу приложение Telegram.
+      // Автоматического перехода на https://t.me тут больше нет,
+      // поэтому страница не будет обновляться на Telegram Web.
+      // Окно «Разрешить открыть Telegram?» убрать нельзя — это защита браузера.
       setTimeout(function () {
         window.location.href = deepLink;
-      }, 180);
-
-      setTimeout(function () {
-        if (document.visibilityState === 'visible') {
-          window.location.href = webLink;
-        }
-      }, 1300);
+      }, 220);
     }
 
     const openBtn = document.getElementById('openTelegram');
-    const downloadBtn = document.getElementById('downloadTelegram');
+    if (openBtn) {
+      openBtn.setAttribute('href', getTelegramDeepLink());
+      openBtn.addEventListener('click', openTelegram);
+    }
 
-    openBtn.setAttribute('href', getTelegramWebUrl());
-    downloadBtn.setAttribute('href', getTelegramDownloadUrl());
-    openBtn.addEventListener('click', openTelegram);
+    const downloadBtn = document.getElementById('downloadTelegram');
+    if (downloadBtn) {
+      downloadBtn.setAttribute('href', getTelegramDownloadUrl());
+    }
   </script>
 </body>
 </html>
