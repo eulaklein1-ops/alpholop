@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Telegram канал</title>
+  <meta name="description" content="Telegram каналга қўшилинг">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--
+    ====== НАСТРОЙКА ======
+    1) TELEGRAM_USERNAME: вставь юзернейм канала без @, например: my_channel
+    2) Если канал закрытый по invite-ссылке вида https://t.me/+AAAAAA,
+       оставь TELEGRAM_USERNAME как есть и вставь код после плюса в TELEGRAM_INVITE_HASH.
+    3) FB_PIXEL_ID: вставь ID пикселя Facebook.
+  -->
+  <script>
+    const TELEGRAM_USERNAME = "";     // без @, пример: halol_daromad
+    const TELEGRAM_INVITE_HASH = "https://t.me/+btOyasLGzl40ZmJk";             // для закрытого канала: код после https://t.me/+
+    const FB_PIXEL_ID = "PASTE_PIXEL_ID_HERE";   // пример: 123456789012345
+  </script>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    function pixelIsReady() {
+      return FB_PIXEL_ID && FB_PIXEL_ID !== "PASTE_PIXEL_ID_HERE" && typeof fbq === "function";
+    }
+
+    if (pixelIsReady()) {
+      fbq('init', FB_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
+  <!-- /Facebook Pixel -->
+
+  <style>
+    :root {
+      --tg: #229ED9;
+      --tg-dark: #1686bc;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #eef0f4;
+      --bg: #ffffff;
+      --soft: #f5f7fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 520px;
+      min-height: 100vh;
+      padding: 12px 16px 28px;
+    }
+
+    .topbar {
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .telegram-logo {
+      height: 31px;
+      width: auto;
+      display: block;
+    }
+
+    .card {
+      margin: 8px auto 0;
+      padding: 22px 12px 12px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 118px;
+      height: 118px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 60% 55%;
+      display: block;
+      margin: 0 auto 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(17, 24, 39, 0.10);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      max-width: 360px;
+      margin: 0 auto 18px;
+      font-size: 18px;
+      line-height: 1.42;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .small-proof {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin: 0 auto 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: #374151;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .actions {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      display: grid;
+      gap: 10px;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .12s ease, filter .12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:active { transform: scale(0.985); }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--tg);
+      box-shadow: 0 10px 22px rgba(34, 158, 217, 0.24);
+    }
+
+    .btn-primary:hover { filter: brightness(0.98); }
+
+    .btn-secondary {
+      color: #374151;
+      background: #e5e7eb;
+      box-shadow: none;
+      font-weight: 700;
+    }
+
+    .note {
+      max-width: 360px;
+      margin: 16px auto 0;
+      color: #9ca3af;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .bottom-image {
+      width: 100%;
+      max-width: 360px;
+      height: 130px;
+      margin: 22px auto 0;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: 50% 62%;
+      display: block;
+      opacity: .96;
+    }
+
+    @media (max-width: 380px) {
+      .page { padding-left: 12px; padding-right: 12px; }
+      h1 { font-size: 27px; }
+      .lead { font-size: 17px; }
+      .avatar { width: 108px; height: 108px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <img class="telegram-logo" src="assets/telegram-logo.png" alt="Telegram">
+    </header>
+
+    <section class="card">
+      <img class="avatar" src="assets/avatar.jpg" alt="Канал аватари">
+
+      <h1>Ҳалол даромад канали</h1>
+
+      <p class="lead">
+        Ассалому алайкум, мусулмон биродарлар! 🤲✨<br>
+        Ҳалол ва баракали даромад ҳақида фойдали маълумотлар.
+      </p>
+
+      <div class="small-proof">🌙 Telegram гуруҳга қўшилинг</div>
+
+      <div class="actions">
+        <a id="openTelegram" class="btn btn-primary js-tg-button" href="#">
+          Telegramga qo'shiling
+        </a>
+      </div>
+
+      <p class="note">
+        Тугмани босинг — Telegram очилади ва сиз каналга қўшилишингиз мумкин.
+      </p>
+
+      <img class="bottom-image" src="assets/photo.jpg" alt="">
+    </section>
+  </main>
+
+  <script>
+    function cleanInviteHash(hash) {
+      return String(hash || '').replace('https://t.me/+', '').replace('http://t.me/+', '').replace('+', '').replace('/', '').trim();
+    }
+
+    function getTelegramWebUrl() {
+      const invite = cleanInviteHash(TELEGRAM_INVITE_HASH);
+      if (invite) return 'https://t.me/+' + invite;
+      return 'https://t.me/' + String(TELEGRAM_USERNAME || '').replace('@', '').trim();
+    }
+
+    function getTelegramDeepLink() {
+      const invite = cleanInviteHash(TELEGRAM_INVITE_HASH);
+      if (invite) return 'tg://join?invite=' + invite;
+      return 'tg://resolve?domain=' + String(TELEGRAM_USERNAME || '').replace('@', '').trim();
+    }
+
+    function getTelegramDownloadUrl() {
+      const ua = navigator.userAgent || '';
+      if (/iPhone|iPad|iPod/i.test(ua)) {
+        return 'https://apps.apple.com/app/telegram-messenger/id686449807';
+      }
+      if (/Android/i.test(ua)) {
+        return 'market://details?id=org.telegram.messenger';
+      }
+      return 'https://telegram.org/dl';
+    }
+
+    function trackLead() {
+      if (pixelIsReady()) {
+        fbq('track', 'Lead');
+      }
+    }
+
+    function openTelegram(event) {
+      event.preventDefault();
+      const deepLink = getTelegramDeepLink();
+      const webLink = getTelegramWebUrl();
+
+      trackLead();
+
+      setTimeout(function () {
+        window.location.href = deepLink;
+      }, 180);
+
+      setTimeout(function () {
+        if (document.visibilityState === 'visible') {
+          window.location.href = webLink;
+        }
+      }, 1300);
+    }
+
+    const openBtn = document.getElementById('openTelegram');
+    const downloadBtn = document.getElementById('downloadTelegram');
+
+    openBtn.setAttribute('href', getTelegramWebUrl());
+    downloadBtn.setAttribute('href', getTelegramDownloadUrl());
+    openBtn.addEventListener('click', openTelegram);
+  </script>
+</body>
+</html>
