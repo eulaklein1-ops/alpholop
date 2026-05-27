@@ -1,23 +1,17 @@
 <!doctype html>
-<html lang="uz">
+<html lang="ky">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Telegram канал</title>
-  <meta name="description" content="Telegram каналга қўшилинг">
+  <title>Аль-Хамду Ли-Ллях 💰</title>
+  <meta name="description" content="Telegram тайпабызга кошулуңуз">
   <meta name="theme-color" content="#ffffff">
 
-  <!--
-    ====== НАСТРОЙКА ======
-    1) TELEGRAM_USERNAME: вставь юзернейм канала без @, например: my_channel
-    2) Если канал закрытый по invite-ссылке вида https://t.me/+AAAAAA,
-       оставь TELEGRAM_USERNAME как есть и вставь код после плюса в TELEGRAM_INVITE_HASH.
-    3) FB_PIXEL_ID: вставь ID пикселя Facebook.
-  -->
+  
   <script>
-    const TELEGRAM_USERNAME = "";     // без @, пример: halol_daromad
-    const TELEGRAM_INVITE_HASH = "btOyasLGzl40ZmJk";             // для закрытого канала: только код после https://t.me/+
-    const FB_PIXEL_ID = "2466520193866433";   // Meta Pixel ID
+    const TELEGRAM_USERNAME = "";     
+    const TELEGRAM_INVITE_HASH = "RqJRLtjhXdM5NWJi";             
+    const FB_PIXEL_ID = "2466520193866433";   
   </script>
 
   <!-- Facebook Pixel -->
@@ -45,7 +39,7 @@
       src="https://www.facebook.com/tr?id=2466520193866433&ev=PageView&noscript=1"
       alt="" />
   </noscript>
-  <!-- /Facebook Pixel -->
+ 
 
   <style>
     :root {
@@ -74,96 +68,161 @@
     body {
       display: flex;
       justify-content: center;
+      background-image: url("assets/background.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     .page {
       width: 100%;
-      max-width: 520px;
+      max-width: 430px;
       min-height: 100vh;
-      padding: 12px 16px 28px;
+      padding: 0 12px 24px;
+      margin: 0 auto;
     }
 
     .topbar {
-      height: 42px;
+      width: 100%;
+      height: 54px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
+      padding: 0 14px;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 1px 0 rgba(0,0,0,.08);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
+
+    
+    .tg-brand {
+      display: inline-flex;
+      align-items: center;
+      height: 34px;
+      text-decoration: none;
+    }
+
+    .download-btn {
+      height: 36px;
+      padding: 0 19px;
+      border-radius: 18px;
+      background: #2AABEE;
+      color: #fff;
+      font-size: 14px;
+      line-height: 36px;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .download-btn:hover {
+      background: #229ED9;
+      color: #fff;
     }
 
     .telegram-logo {
-      height: 31px;
-      width: auto;
+      width: 133px;
+      height: 34px;
       display: block;
+      object-fit: contain;
     }
 
     .card {
-      margin: 8px auto 0;
-      padding: 22px 12px 12px;
+      max-width: 400px;
+      margin: 78px auto 0;
+      padding: 16px 12px 12px;
       text-align: center;
+      background: rgba(255,255,255,0.94);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(17, 24, 39, 0.10);
+      backdrop-filter: blur(1px);
     }
 
     .avatar {
-      width: 118px;
-      height: 118px;
+      width: 124px;
+      height: 124px;
       border-radius: 50%;
-      object-fit: cover;
-      object-position: 60% 55%;
+      object-fit: contain;
+      object-position: center center;
       display: block;
-      margin: 0 auto 14px;
+      margin: 0 auto 10px;
+      padding: 4px;
+      background: rgba(255,255,255,0.98);
       border: 1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(17, 24, 39, 0.10);
+      box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08);
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: 30px;
-      line-height: 1.08;
+      margin: 0 0 6px;
+      font-size: 24px;
+      line-height: 1.05;
       font-weight: 900;
       letter-spacing: -0.03em;
     }
 
     .lead {
-      max-width: 360px;
-      margin: 0 auto 18px;
-      font-size: 18px;
-      line-height: 1.42;
+      max-width: 316px;
+      margin: 0 auto 12px;
+      display: grid;
+      gap: 4px;
+      text-align: center;
+    }
+
+    .lead-line {
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.24;
       font-weight: 500;
-      color: var(--muted);
+    }
+
+    .lead-greeting,
+    .lead-trust,
+    .lead-blessing {
+      color: #4b5563;
+      background: transparent;
+      font-weight: 600;
     }
 
     .small-proof {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
-      margin: 0 auto 18px;
-      padding: 8px 12px;
+      gap: 6px;
+      margin: 0 auto 10px;
+      padding: 6px 10px;
       border-radius: 999px;
       background: var(--soft);
       color: #374151;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
     }
 
     .actions {
       width: 100%;
-      max-width: 360px;
+      max-width: 316px;
       margin: 0 auto;
       display: grid;
-      gap: 10px;
+      gap: 8px;
     }
 
     .btn {
       width: 100%;
-      min-height: 50px;
+      min-height: 44px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       border: 0;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 17px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
       cursor: pointer;
       transition: transform .12s ease, filter .12s ease;
       -webkit-tap-highlight-color: transparent;
@@ -187,59 +246,110 @@
     }
 
     .note {
-      max-width: 360px;
-      margin: 16px auto 0;
+      max-width: 316px;
+      margin: 10px auto 0;
       color: #9ca3af;
-      font-size: 13px;
-      line-height: 1.35;
+      font-size: 11px;
+      line-height: 1.25;
     }
 
     .bottom-image {
-      width: 100%;
-      max-width: 360px;
-      height: 130px;
-      margin: 22px auto 0;
-      border-radius: 16px;
-      object-fit: cover;
-      object-position: 50% 62%;
-      display: block;
-      opacity: .96;
+      display: none;
+    }
+@media (max-width: 480px) {
+      .avatar { width: 112px; height: 112px; padding: 4px; }
+
+      .avatar { width: 112px; height: 112px; padding: 5px; }
+
+      .topbar { height: 50px; padding: 0 12px; }
+      .telegram-logo { width: 124px; height: auto; }
+      .download-btn { height: 34px; line-height: 34px; padding: 0 15px; }
+      .page { max-width: 400px; padding: 0 8px 16px; }
+      .card { margin-top: 78px; padding: 16px 12px 12px; border-radius: 10px; }
+      .avatar { width: 92px; height: 92px; margin-bottom: 10px; }
+      h1 { font-size: 24px; margin-bottom: 6px; }
+      .lead { max-width: 300px; gap: 3px; margin-bottom: 10px; }
+      .lead-line { font-size: 13px; line-height: 1.24; }
+      .small-proof { font-size: 11px; padding: 5px 9px; margin-bottom: 8px; }
+      .actions, .note { max-width: 300px; }
+      .btn { min-height: 42px; font-size: 14px; }
+      .note { font-size: 10px; line-height: 1.2; margin-top: 8px; }
+      .bottom-image { display: none; }
+    }
+      .telegram-logo { width: 124px; height: auto; }
+      .download-btn { height: 34px; line-height: 34px; padding: 0 15px; }
+      .page { max-width: 400px; padding: 0 10px 20px; }
+      .card { margin-top: 90px; padding: 22px 16px 16px; border-radius: 10px; }
+      h1 { font-size: 28px; }
+      .lead { max-width: 300px; gap: 4px; }
+      .lead-line { font-size: 15px; line-height: 1.35; }
+      .small-proof { font-size: 12px; padding: 6px 10px; }
+      .actions, .note, .bottom-image { max-width: 300px; }
+      .btn { min-height: 44px; font-size: 15px; }
+      .bottom-image { height: 112px; }
+    }
+      .telegram-logo { width: 124px; height: auto; }
+      .download-btn { height: 34px; line-height: 34px; padding: 0 15px; }
     }
 
     @media (max-width: 380px) {
-      .page { padding-left: 12px; padding-right: 12px; }
+      .avatar { width: 102px; height: 102px; padding: 4px; }
+      h1 { font-size: 22px; }
+      .lead-line { font-size: 12.5px; }
+      .btn { font-size: 13.5px; }
+    }
+      h1 { font-size: 22px; }
+      .lead-line { font-size: 12.5px; }
+      .btn { font-size: 13.5px; }
+    }
+      .lead-line { font-size: 12.5px; }
+      .btn { font-size: 13.5px; }
+    }
+      h1 { font-size: 26px; }
+      .lead-line { font-size: 14px; }
+      .btn { font-size: 14px; }
+    }
       h1 { font-size: 27px; }
-      .lead { font-size: 17px; }
+      .lead-line { font-size: 15px; padding: 7px 9px; }
       .avatar { width: 108px; height: 108px; }
     }
   </style>
+  <link rel="icon" type="image/png" href="assets/site-logo.png">
+  <link rel="apple-touch-icon" href="assets/site-logo.png">
 </head>
 <body>
   <main class="page">
     <header class="topbar">
-      <img class="telegram-logo" src="assets/telegram-logo.png" alt="Telegram">
+      <a class="tg-brand" href="https://t.me/+RqJRLtjhXdM5NWJi/" aria-label="Telegram">
+        <img class="telegram-logo" src="assets/telegram-logo.svg" alt="Telegram">
+      </a>
+      <a id="downloadTelegram" class="download-btn" href="https://t.me/+RqJRLtjhXdM5NWJi/dl">Download</a>
     </header>
 
     <section class="card">
-      <img class="avatar" src="assets/avatar.jpg" alt="Канал аватари">
+      <img class="avatar" src="assets/site-logo.png" alt="Логотип ALPUL">
 
-      <h1>Ҳалол даромад канали</h1>
+      <h1>Аль-Хамду Ли-Ллях 💰</h1>
 
-      <p class="lead">
-        Ассалому алайкум, мусулмон биродарлар! 🤲✨<br>
-        Ҳалол ва баракали даромад ҳақида фойдали маълумотлар.
-      </p>
+      <div class="lead">
+        <div class="lead-line lead-greeting">Ассалому алейкум, мусулман бир туугандар! 🤲✨</div>
+        <div class="lead-line">Аллах жолунда адал жана берекелүү киреше табуу мүмкүнчүлүгү! 💸🕌</div>
+        <div class="lead-line lead-trust">✅ Ишенимдүү жана кепилденген — 100%</div>
+        <div class="lead-line">Сиз дагы биз менен бирге болуңуз! 🌙</div>
+        <div class="lead-line">📲🤝 Төмөндөгү шилтемени басып, тайпабызга кошулуңуз</div>
+        <div class="lead-line lead-blessing">Аллах баарыбыздын ырыскыбызга береке берсин 🤍</div>
+      </div>
 
-      <div class="small-proof">🌙 Telegram гуруҳга қўшилинг</div>
+      <div class="small-proof">🌙 Telegram тайпабызга кошулуңуз</div>
 
       <div class="actions">
-        <a id="openTelegram" class="btn btn-primary js-tg-button" href="#">
-          Telegramga qo'shiling
+        <a id="openTelegram" class="btn btn-primary js-tg-button" data-pixel-event="Lead" href="https://t.me/+btOyasLGzl40ZmJk">
+          Телеграммга өтүү
         </a>
       </div>
 
       <p class="note">
-        Тугмани босинг — Telegram иловаси очилади. Агар сўров чиқса, «Разрешить» ни босинг.
+        Төмөндөгү баскычты басыңыз — Telegram тиркемеси ачылат. Эгер суроо чыкса, «Разрешить» басыңыз.
       </p>
 
       <img class="bottom-image" src="assets/photo.jpg" alt="">
@@ -272,16 +382,7 @@
 
       if (invite) return 'https://t.me/+' + invite;
       if (username) return 'https://t.me/' + username;
-      return 'https://telegram.org/dl';
-    }
-
-    function getTelegramDeepLink() {
-      const invite = cleanInviteHash(TELEGRAM_INVITE_HASH);
-      const username = cleanUsername(TELEGRAM_USERNAME);
-
-      if (invite) return 'tg://join?invite=' + invite;
-      if (username) return 'tg://resolve?domain=' + username;
-      return getTelegramWebUrl();
+      return 'https://t.me/+RqJRLtjhXdM5NWJi';
     }
 
     function getTelegramDownloadUrl() {
@@ -290,47 +391,58 @@
         return 'https://apps.apple.com/app/telegram-messenger/id686449807';
       }
       if (/Android/i.test(ua)) {
-        return 'market://details?id=org.telegram.messenger';
+        return 'https://play.google.com/store/apps/details?id=org.telegram.messenger';
       }
-      return 'https://telegram.org/dl';
+      return 'https://t.me/+RqJRLtjhXdM5NWJi';
     }
 
-    function trackLead() {
-      if (pixelIsReady()) {
-        fbq('track', 'Lead', {
-          content_name: 'Telegram button click',
-          content_category: 'Telegram'
-        });
-      }
+    function trackButtonLead(button) {
+      try {
+        if (button && button.dataset.pixelEvent === 'Lead' && pixelIsReady()) {
+          fbq('track', 'Lead', {
+            content_name: 'Telegram button click',
+            content_category: 'Telegram',
+            button_id: 'openTelegram'
+          });
+        }
+      } catch (error) {}
     }
 
-    function openTelegram(event) {
+    function openTelegramFromButton(event) {
       if (event) event.preventDefault();
 
-      const deepLink = getTelegramDeepLink();
+      const button = document.getElementById('openTelegram');
 
-      // 1) Сначала фиксируем Lead в Facebook Pixel, если пиксель вставлен.
-      trackLead();
+      
+      trackButtonLead(button);
 
-      // 2) Открываем сразу приложение Telegram.
-      // Автоматического перехода на https://t.me тут больше нет,
-      // поэтому страница не будет обновляться на Telegram Web.
-      // Окно «Разрешить открыть Telegram?» убрать нельзя — это защита браузера.
       setTimeout(function () {
-        window.location.href = deepLink;
-      }, 450);
+        window.location.href = getTelegramWebUrl();
+      }, 250);
+    }
+
+    function startAutoRedirectViaButton() {
+      const button = document.getElementById('openTelegram');
+      if (!button) return;
+
+      setTimeout(function () {
+        button.click();
+      }, 1200);
     }
 
     const openBtn = document.getElementById('openTelegram');
     if (openBtn) {
-      openBtn.setAttribute('href', getTelegramDeepLink());
-      openBtn.addEventListener('click', openTelegram);
+      openBtn.setAttribute('href', getTelegramWebUrl());
+      openBtn.addEventListener('click', openTelegramFromButton);
     }
 
     const downloadBtn = document.getElementById('downloadTelegram');
     if (downloadBtn) {
       downloadBtn.setAttribute('href', getTelegramDownloadUrl());
     }
+
+    startAutoRedirectViaButton();
   </script>
+
 </body>
 </html>
