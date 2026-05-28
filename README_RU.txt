@@ -1,0 +1,1 @@
+Исправлены og:image для Meta Debugger, CSS и ссылки Telegram. После загрузки нажми «Повторить скрапинг» в Sharing Debugger.
