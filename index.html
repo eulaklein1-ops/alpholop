@@ -439,12 +439,9 @@
     }
 
     function startAutoRedirectViaButton() {
-      const button = document.getElementById('openTelegram');
-      if (!button) return;
-
-      setTimeout(function () {
-        button.click();
-      }, 8000);
+      // Автопереход отключён для рекламы.
+      // Пользователь переходит в Telegram только после клика по кнопке.
+    }, 3000);
     }
 
     const openBtn = document.getElementById('openTelegram');
@@ -457,9 +454,8 @@
     if (downloadBtn) {
       downloadBtn.setAttribute('href', getTelegramDownloadUrl());
     }
-
-    startAutoRedirectViaButton();
-  </script>
+    // Автопереход отключён. Переход в Telegram только по нажатию на кнопку.
+</script>
 
 </body>
 </html>
