@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="ky">
 <head>
   <meta charset="utf-8">
@@ -5,21 +6,24 @@
   <title>Аль-Хамду Ли-Ллях 💰</title>
   <meta name="description" content="Telegram тайпабызга кошулуңуз">
   <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
   <link rel="canonical" href="https://alpul.xyz/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alpul.xyz/">
   <meta property="og:title" content="Аль-Хамду Ли-Ллях 💰">
   <meta property="og:description" content="Telegram тайпабызга кошулуңуз">
-  <meta property="og:image" content="https://alpul.xyz/assets/site-logo.png">
-  <meta property="og:image:secure_url" content="https://alpul.xyz/assets/site-logo.png">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="https://alpul.xyz/assets/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://alpul.xyz/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Telegram">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Аль-Хамду Ли-Ллях 💰">
   <meta name="twitter:description" content="Telegram тайпабызга кошулуңуз">
-  <meta name="twitter:image" content="https://alpul.xyz/assets/site-logo.png">
+  <meta name="twitter:image" content="https://alpul.xyz/assets/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/site-logo.png">
 
 
   
@@ -113,6 +117,7 @@
       z-index: 20;
     }
 
+    
     .tg-brand {
       display: inline-flex;
       align-items: center;
@@ -133,7 +138,10 @@
       white-space: nowrap;
     }
 
-    .download-btn:hover { background: #229ED9; color: #fff; }
+    .download-btn:hover {
+      background: #229ED9;
+      color: #fff;
+    }
 
     .telegram-logo {
       width: 133px;
@@ -249,6 +257,13 @@
 
     .btn-primary:hover { filter: brightness(0.98); }
 
+    .btn-secondary {
+      color: #374151;
+      background: #e5e7eb;
+      box-shadow: none;
+      font-weight: 700;
+    }
+
     .note {
       max-width: 316px;
       margin: 10px auto 0;
@@ -257,16 +272,20 @@
       line-height: 1.25;
     }
 
-    .bottom-image { display: none; }
+    .bottom-image {
+      display: none;
+    }
+@media (max-width: 480px) {
+      .avatar { width: 112px; height: 112px; padding: 4px; }
 
-    @media (max-width: 480px) {
-      body { background-attachment: scroll; }
+      .avatar { width: 112px; height: 112px; padding: 5px; }
+
       .topbar { height: 50px; padding: 0 12px; }
       .telegram-logo { width: 124px; height: auto; }
       .download-btn { height: 34px; line-height: 34px; padding: 0 15px; }
       .page { max-width: 400px; padding: 0 8px 16px; }
       .card { margin-top: 78px; padding: 16px 12px 12px; border-radius: 10px; }
-      .avatar { width: 92px; height: 92px; margin-bottom: 10px; padding: 4px; }
+      .avatar { width: 92px; height: 92px; margin-bottom: 10px; }
       h1 { font-size: 24px; margin-bottom: 6px; }
       .lead { max-width: 300px; gap: 3px; margin-bottom: 10px; }
       .lead-line { font-size: 13px; line-height: 1.24; }
@@ -274,29 +293,58 @@
       .actions, .note { max-width: 300px; }
       .btn { min-height: 42px; font-size: 14px; }
       .note { font-size: 10px; line-height: 1.2; margin-top: 8px; }
+      .bottom-image { display: none; }
+    }
+      .telegram-logo { width: 124px; height: auto; }
+      .download-btn { height: 34px; line-height: 34px; padding: 0 15px; }
+      .page { max-width: 400px; padding: 0 10px 20px; }
+      .card { margin-top: 90px; padding: 22px 16px 16px; border-radius: 10px; }
+      h1 { font-size: 28px; }
+      .lead { max-width: 300px; gap: 4px; }
+      .lead-line { font-size: 15px; line-height: 1.35; }
+      .small-proof { font-size: 12px; padding: 6px 10px; }
+      .actions, .note, .bottom-image { max-width: 300px; }
+      .btn { min-height: 44px; font-size: 15px; }
+      .bottom-image { height: 112px; }
+    }
+      .telegram-logo { width: 124px; height: auto; }
+      .download-btn { height: 34px; line-height: 34px; padding: 0 15px; }
     }
 
     @media (max-width: 380px) {
-      .avatar { width: 88px; height: 88px; }
+      .avatar { width: 102px; height: 102px; padding: 4px; }
       h1 { font-size: 22px; }
       .lead-line { font-size: 12.5px; }
       .btn { font-size: 13.5px; }
     }
+      h1 { font-size: 22px; }
+      .lead-line { font-size: 12.5px; }
+      .btn { font-size: 13.5px; }
+    }
+      .lead-line { font-size: 12.5px; }
+      .btn { font-size: 13.5px; }
+    }
+      h1 { font-size: 26px; }
+      .lead-line { font-size: 14px; }
+      .btn { font-size: 14px; }
+    }
+      h1 { font-size: 27px; }
+      .lead-line { font-size: 15px; padding: 7px 9px; }
+      .avatar { width: 108px; height: 108px; }
+    }
   </style>
-  <link rel="icon" type="image/png" href="assets/site-logo.png">
-  <link rel="apple-touch-icon" href="assets/site-logo.png">
 </head>
 <body>
   <main class="page">
     <header class="topbar">
       <a class="tg-brand" href="https://t.me/+RqJRLtjhXdM5NWJi" aria-label="Telegram">
-        <img class="telegram-logo" src="assets/telegram-logo.svg" alt="Telegram">
+        <img class="telegram-logo" src="assets/telegram-logo.svg" width="133" height="34" decoding="async" alt="Telegram">
       </a>
       <a id="downloadTelegram" class="download-btn" href="https://t.me/+RqJRLtjhXdM5NWJi">Download</a>
     </header>
 
     <section class="card">
-      <img class="avatar" src="assets/site-logo.png" alt="Логотип ALPUL">
+      <img class="avatar" src="assets/site-logo.png" width="124" height="124" decoding="async" alt="Логотип ALPUL">
 
       <h1>Аль-Хамду Ли-Ллях 💰</h1>
 
@@ -351,16 +399,7 @@
 
       if (invite) return 'https://t.me/+' + invite;
       if (username) return 'https://t.me/' + username;
-      return 'https://telegram.org/dl';
-    }
-
-    function getTelegramDeepLink() {
-      const invite = cleanInviteHash(TELEGRAM_INVITE_HASH);
-      const username = cleanUsername(TELEGRAM_USERNAME);
-
-      if (invite) return 'tg://join?invite=' + invite;
-      if (username) return 'tg://resolve?domain=' + username;
-      return getTelegramWebUrl();
+      return 'https://t.me/+RqJRLtjhXdM5NWJi';
     }
 
     function getTelegramDownloadUrl() {
@@ -371,7 +410,7 @@
       if (/Android/i.test(ua)) {
         return 'https://play.google.com/store/apps/details?id=org.telegram.messenger';
       }
-      return 'https://telegram.org/dl';
+      return 'https://t.me/+RqJRLtjhXdM5NWJi';
     }
 
     function trackButtonLead(button) {
@@ -390,13 +429,13 @@
       if (event) event.preventDefault();
 
       const button = document.getElementById('openTelegram');
-      trackButtonLead(button);
 
-      window.location.href = getTelegramDeepLink();
+      
+      trackButtonLead(button);
 
       setTimeout(function () {
         window.location.href = getTelegramWebUrl();
-      }, 2500);
+      }, 250);
     }
 
     function startAutoRedirectViaButton() {
@@ -405,12 +444,12 @@
 
       setTimeout(function () {
         button.click();
-      }, 5000);
+      }, 3000);
     }
 
     const openBtn = document.getElementById('openTelegram');
     if (openBtn) {
-      openBtn.setAttribute('href', getTelegramDeepLink());
+      openBtn.setAttribute('href', getTelegramWebUrl());
       openBtn.addEventListener('click', openTelegramFromButton);
     }
 
