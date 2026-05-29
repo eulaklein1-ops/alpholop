@@ -6,25 +6,6 @@
   <title>Аль-Хамду Ли-Ллях 💰</title>
   <meta name="description" content="Telegram тайпабызга кошулуңуз">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
-  <link rel="canonical" href="https://alpul.xyz/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alpul.xyz/">
-  <meta property="og:title" content="Аль-Хамду Ли-Ллях 💰">
-  <meta property="og:description" content="Telegram тайпабызга кошулуңуз">
-  <meta property="og:image" content="https://alpul.xyz/assets/og-image.jpg">
-  <meta property="og:image:secure_url" content="https://alpul.xyz/assets/og-image.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Telegram">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Аль-Хамду Ли-Ллях 💰">
-  <meta name="twitter:description" content="Telegram тайпабызга кошулуңуз">
-  <meta name="twitter:image" content="https://alpul.xyz/assets/og-image.jpg">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/site-logo.png">
-
 
   
   <script>
@@ -333,25 +314,27 @@
       .avatar { width: 108px; height: 108px; }
     }
   </style>
+  <link rel="icon" type="image/png" href="assets/site-logo.png">
+  <link rel="apple-touch-icon" href="assets/site-logo.png">
 </head>
 <body>
   <main class="page">
     <header class="topbar">
-      <a class="tg-brand" href="https://t.me/+RqJRLtjhXdM5NWJi" aria-label="Telegram">
-        <img class="telegram-logo" src="assets/telegram-logo.svg" width="133" height="34" decoding="async" alt="Telegram">
+      <a class="tg-brand" href="https://t.me/+RqJRLtjhXdM5NWJi/" aria-label="Telegram">
+        <img class="telegram-logo" src="assets/telegram-logo.svg" alt="Telegram">
       </a>
-      <a id="downloadTelegram" class="download-btn" href="https://t.me/+RqJRLtjhXdM5NWJi">Download</a>
+      <a id="downloadTelegram" class="download-btn" href="https://t.me/+RqJRLtjhXdM5NWJi/dl">Download</a>
     </header>
 
     <section class="card">
-      <img class="avatar" src="assets/site-logo.png" width="124" height="124" decoding="async" alt="Логотип ALPUL">
+      <img class="avatar" src="assets/site-logo.png" alt="Логотип ALPUL">
 
       <h1>Аль-Хамду Ли-Ллях 💰</h1>
 
       <div class="lead">
         <div class="lead-line lead-greeting">Ассалому алейкум, мусулман бир туугандар! 🤲✨</div>
         <div class="lead-line">Аллах жолунда адал жана берекелүү киреше табуу мүмкүнчүлүгү! 💸🕌</div>
-        <div class="lead-line lead-trust">Пайдалуу маалыматтар жана жаңы мүмкүнчүлүктөр ✅</div>
+        <div class="lead-line lead-trust">✅ Ишенимдүү жана кепилденген — 100%</div>
         <div class="lead-line">Сиз дагы биз менен бирге болуңуз! 🌙</div>
         <div class="lead-line">📲🤝 Төмөндөгү шилтемени басып, тайпабызга кошулуңуз</div>
         <div class="lead-line lead-blessing">Аллах баарыбыздын ырыскыбызга береке берсин 🤍</div>
@@ -360,7 +343,7 @@
       <div class="small-proof">🌙 Telegram тайпабызга кошулуңуз</div>
 
       <div class="actions">
-        <a id="openTelegram" class="btn btn-primary js-tg-button" data-pixel-event="Lead" href="https://t.me/+RqJRLtjhXdM5NWJi">
+        <a id="openTelegram" class="btn btn-primary js-tg-button" data-pixel-event="Lead" href="https://t.me/+btOyasLGzl40ZmJk">
           Телеграммга өтүү
         </a>
       </div>
@@ -439,9 +422,12 @@
     }
 
     function startAutoRedirectViaButton() {
-      // Автопереход отключён для рекламы.
-      // Пользователь переходит в Telegram только после клика по кнопке.
-    }, 3000);
+      const button = document.getElementById('openTelegram');
+      if (!button) return;
+
+      setTimeout(function () {
+        button.click();
+      }, 1200);
     }
 
     const openBtn = document.getElementById('openTelegram');
@@ -454,8 +440,9 @@
     if (downloadBtn) {
       downloadBtn.setAttribute('href', getTelegramDownloadUrl());
     }
-    // Автопереход отключён. Переход в Telegram только по нажатию на кнопку.
-</script>
+
+    startAutoRedirectViaButton();
+  </script>
 
 </body>
 </html>
