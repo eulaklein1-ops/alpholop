@@ -35,3 +35,6 @@ products.js
 2. Загрузи все файлы в репозиторий GitHub.
 3. Включи Pages: Settings → Pages → Deploy from branch → main / root.
 4. Через несколько минут сайт откроется по ссылке GitHub Pages.
+
+## Favicon
+Добавлены иконки для всех устройств: favicon.ico, favicon.svg, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, android-chrome-192x192.png, android-chrome-512x512.png, site.webmanifest, browserconfig.xml.
