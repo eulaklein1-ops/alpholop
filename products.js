@@ -505,9 +505,9 @@ const PRODUCTS = [
   },
   {
     "title": "Зимнее защитное накрытие для бассейнов IPOOLGO, диаметр 3 м",
-    "price": 0,
-    "old_price": 0,
-    "uah": 0,
+    "price": 151100,
+    "old_price": 169200,
+    "uah": 12592,
     "article": "AP-02",
     "category": "Аксессуары",
     "image": "assets/images/p003_b76ab8.webp",
@@ -530,9 +530,9 @@ const PRODUCTS = [
   },
   {
     "title": "Фильтрационная установка Emaux FSU-8TP, 8 м³/ч, D300",
-    "price": 0,
-    "old_price": 0,
-    "uah": 0,
+    "price": 181600,
+    "old_price": 203400,
+    "uah": 15136,
     "article": "filtracziya-profi",
     "category": "Насосы и фильтры",
     "image": "assets/images/p013_5377d2.webp",
@@ -551,9 +551,9 @@ const PRODUCTS = [
   },
   {
     "title": "Электрический насос IPOOLGO Intelligent DC Electric Pump IP 790",
-    "price": 0,
-    "old_price": 0,
-    "uah": 0,
+    "price": 72000,
+    "old_price": 80600,
+    "uah": 5999,
     "article": "AP-01",
     "category": "Насосы и фильтры",
     "image": "assets/images/p016_fca8df.webp",
@@ -576,9 +576,9 @@ const PRODUCTS = [
   },
   {
     "title": "Фильтрационная установка Bestway FlowClear 58497, 5.6 м³/ч, D254",
-    "price": 0,
-    "old_price": 0,
-    "uah": 0,
+    "price": 74300,
+    "old_price": 83200,
+    "uah": 6192,
     "article": "filtracziya-standart",
     "category": "Насосы и фильтры",
     "image": "assets/images/p017_2addee.webp",
@@ -594,5 +594,541 @@ const PRODUCTS = [
       "Менеджер подскажет совместимость",
       "Можно добавить к заказу вместе с бассейном"
     ]
+  },
+  {
+    "title": "Вкапываемый прямоугольный бассейн IPOOLGO 5 × 3 × 1,5 м",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "ING-530",
+    "category": "Вкапываемые бассейны",
+    "image": "assets/ipoolgoo_best/rect_premium_09.webp",
+    "gallery": [
+      "assets/ipoolgoo_best/rect_premium_09.webp",
+      "assets/ipoolgoo_best/rect_premium_10.webp",
+      "assets/ipoolgoo_best/rect_premium_01.jpg",
+      "assets/ipoolgoo_best/rect_premium_04.webp",
+      "assets/ipoolgoo_best/rect_premium_06.webp"
+    ],
+    "size": "5 × 3 × 1,5 м",
+    "form": "Прямоугольная",
+    "depth": "1,5 м",
+    "desc": "Премиальный вкапываемый бассейн для двора или загородного дома. Смотрится как капитальное решение, но сохраняет преимущества Drop Stitch: плотные борта, аккуратная геометрия и быстрая установка с подготовленной площадкой.",
+    "features": [
+      "Материал ПВХ / Drop Stitch — борта держат форму и выдерживают нагрузку воды",
+      "Подходит для установки на ровную площадку, террасу или подготовленный участок",
+      "Можно подключить фильтрацию, лестницу, накрытие и другое оборудование",
+      "Доставка по Казахстану и консультация по подбору размера",
+      "Подходит для проекта с частичным или полным заглублением"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Вкапываемый"
+  },
+  {
+    "title": "Ледяная ванна IPOOLGO ICE BATH V2",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "ICE-V2",
+    "category": "Купели и джакузи",
+    "image": "assets/ipoolgoo_catalog/ice_bath_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/ice_bath_01.jpg",
+      "assets/ipoolgoo_catalog/ice_barrel_01.jpg",
+      "assets/images/p018_91f67d.webp"
+    ],
+    "size": "0,92 × 0,5 × 0,4 м",
+    "form": "Купель",
+    "depth": "40 см",
+    "desc": "Компактная ледяная ванна для восстановления после тренировок, дачи, сауны или банного комплекса. Быстро устанавливается, занимает мало места и легко убирается после использования.",
+    "features": [
+      "Подходит для холодных процедур и восстановления после спорта",
+      "компактная в хранении",
+      "можно использовать рядом с баней, сауной или во дворе",
+      "быстрая подготовка к использованию"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Новинка"
+  },
+  {
+    "title": "Ледяная купель IPOOLGO ICE CUBE",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "ICE-CUBE",
+    "category": "Купели и джакузи",
+    "image": "assets/ipoolgoo_catalog/ice_barrel_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/ice_barrel_01.jpg",
+      "assets/ipoolgoo_catalog/ice_bath_01.jpg"
+    ],
+    "size": "1,5 × 1,5 × 1 м",
+    "form": "Квадратная купель",
+    "depth": "1 м",
+    "desc": "Большая ледяная купель для частного дома, спа-зоны или банного комплекса. Хороший вариант для клиентов, которым нужна не просто ванна, а полноценная зона холодного погружения.",
+    "features": [
+      "Устойчивая форма",
+      "подходит для бани и спа",
+      "быстрый монтаж",
+      "компактнее капитальной купели"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "SPA"
+  },
+  {
+    "title": "Джакузи IPOOLGO ONSEN с аэромассажем",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "ONSEN-HEX",
+    "category": "Купели и джакузи",
+    "image": "assets/ipoolgoo_catalog/onsen_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/onsen_01.jpg",
+      "assets/ipoolgoo_catalog/onsen_02.jpg"
+    ],
+    "size": "2 × 2 × 0,8 м",
+    "form": "Многоугольная",
+    "depth": "0,8 м",
+    "desc": "Надувное джакузи с аэромассажем для отдыха во дворе, на террасе или в зоне банного комплекса. Выглядит премиально и помогает поднять средний чек заказа.",
+    "features": [
+      "Аэромассаж для комфортного отдыха",
+      "Можно поставить во дворе или на террасе",
+      "Быстрая установка без капитального строительства",
+      "Подходит для семейного отдыха"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Premium"
+  },
+  {
+    "title": "Надувной диван EGC SETTEE",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "SETTEE",
+    "category": "SUP мебель",
+    "image": "assets/ipoolgoo_catalog/settee_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/settee_01.jpg",
+      "assets/ipoolgoo_catalog/settee_02.jpg"
+    ],
+    "size": "1,5 × 0,75 × 1,1 м",
+    "form": "Диван",
+    "depth": "сиденье 55 см",
+    "desc": "Надувной диван для пляжа, дачи, пикника и отдыха рядом с бассейном. Лёгкий, компактный в хранении и удобный для перевозки.",
+    "features": [
+      "Подходит для 1–2 человек",
+      "Материал устойчив к износу",
+      "Быстро надувается и сдувается",
+      "Есть ручка для переноски"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Мебель"
+  },
+  {
+    "title": "Надувное кресло EGC BERGERE",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "BERGERE",
+    "category": "SUP мебель",
+    "image": "assets/ipoolgoo_catalog/chair_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/chair_01.jpg",
+      "assets/ipoolgoo_catalog/chair_02.jpg"
+    ],
+    "size": "0,95 × 0,7 × 1,1 м",
+    "form": "Кресло",
+    "depth": "сиденье 50 см",
+    "desc": "Комфортное надувное кресло для зоны отдыха, террасы, пляжа или бассейна. Хороший дополнительный товар к бассейнам и купелям.",
+    "features": [
+      "Удобная посадка",
+      "Компактное хранение",
+      "Подходит для отдыха на даче и у воды",
+      "Современный минималистичный вид"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Мебель"
+  },
+  {
+    "title": "Надувной шезлонг EGC CLAMSHELL",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "CLAMSHELL",
+    "category": "SUP мебель",
+    "image": "assets/ipoolgoo_catalog/lounger_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/lounger_01.jpg",
+      "assets/ipoolgoo_catalog/lounger_02.jpg"
+    ],
+    "size": "1,5 × 0,6 × 0,9 м",
+    "form": "Шезлонг",
+    "depth": "—",
+    "desc": "Надувной шезлонг для отдыха на участке, у бассейна или на пляже. Клиент может докупить его вместе с бассейном как готовую зону отдыха.",
+    "features": [
+      "Для отдыха у бассейна",
+      "Лёгкий и мобильный",
+      "Не занимает много места в хранении",
+      "Подходит для дачи и террасы"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Мебель"
+  },
+  {
+    "title": "Надувной стол EGC SURFACE",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "SURFACE",
+    "category": "SUP мебель",
+    "image": "assets/ipoolgoo_catalog/table_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/table_01.jpg",
+      "assets/ipoolgoo_catalog/table_02.jpg"
+    ],
+    "size": "1,3 × 0,8 × 0,45 м",
+    "form": "Стол",
+    "depth": "—",
+    "desc": "Надувной стол для террасы, зоны отдыха и площадки рядом с бассейном. Помогает собрать полноценный комплект мебели в одном стиле.",
+    "features": [
+      "Для зоны отдыха",
+      "Быстрая установка",
+      "Лёгкий вес",
+      "Компактное хранение"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Мебель"
+  },
+  {
+    "title": "Надувной плот EGC PONTOON",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "PONTOON",
+    "category": "SUP мебель",
+    "image": "assets/ipoolgoo_catalog/pontoon_02.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/pontoon_02.jpg",
+      "assets/ipoolgoo_catalog/pontoon_01.jpg"
+    ],
+    "size": "Ø 1,5 × 0,15 м",
+    "form": "Плот",
+    "depth": "—",
+    "desc": "Плавающая платформа для отдыха на воде. Подходит для дачи, бассейна, пляжа и семейного отдыха.",
+    "features": [
+      "Можно использовать на воде",
+      "Удобен для отдыха и фото",
+      "Лёгкий и компактный",
+      "Подходит как допродажа к бассейну"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Для воды"
+  },
+  {
+    "title": "Плавающий столик EGC TRAY",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "TRAY",
+    "category": "SUP мебель",
+    "image": "assets/ipoolgoo_catalog/tray_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/tray_01.jpg",
+      "assets/ipoolgoo_catalog/tray_02.jpg"
+    ],
+    "size": "1,6 × 0,6 × 0,15 м",
+    "form": "Плавающий столик",
+    "depth": "—",
+    "desc": "Плавающий столик для напитков и мелочей во время отдыха в бассейне. Небольшой товар, который хорошо добавлять к основному заказу.",
+    "features": [
+      "Для напитков и аксессуаров",
+      "Плавает на воде",
+      "Не требует сложной установки",
+      "Подходит для семейного отдыха"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Для воды"
+  },
+  {
+    "title": "Надувная лестница-горка SLOPE",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "SLOPE",
+    "category": "Аксессуары",
+    "image": "assets/ipoolgoo_catalog/slope_01.webp",
+    "gallery": [
+      "assets/ipoolgoo_catalog/slope_01.webp",
+      "assets/ipoolgoo_catalog/slope_02.webp"
+    ],
+    "size": "250 × 130 × 210 см",
+    "form": "Лестница-горка",
+    "depth": "—",
+    "desc": "Надувная лестница-горка для бассейна. Делает отдых детей и взрослых более интересным и помогает показать сайт как полноценный магазин, а не просто витрину бассейнов.",
+    "features": [
+      "Подходит для бассейнов и игровой зоны",
+      "Большой размер 250 × 130 × 210 см",
+      "Быстро надувается",
+      "Яркая дополнительная позиция для каталога"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Для детей"
+  },
+  {
+    "title": "Надувная крышка EGC BUCKLER для круглого бассейна",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "BUCKLER-R",
+    "category": "Крышки и тенты",
+    "image": "assets/ipoolgoo_catalog/lid_round_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/lid_round_01.jpg",
+      "assets/ipoolgoo_catalog/lid_round_02.jpg"
+    ],
+    "size": "Ø 2 м / Ø 3 м / Ø 3,7 м / Ø 4 м",
+    "form": "Круглая крышка",
+    "depth": "—",
+    "desc": "Накрытие помогает защищать воду от мусора, листьев и пыли. Клиенту проще купить крышку сразу вместе с бассейном.",
+    "features": [
+      "Защита воды от мусора",
+      "Подходит для круглых бассейнов разных диаметров",
+      "Удобно для ежедневного использования",
+      "Помогает уменьшить загрязнение воды"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Накрытие"
+  },
+  {
+    "title": "Надувная крышка EGC BUCKLER для прямоугольного бассейна",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "BUCKLER-SQ",
+    "category": "Крышки и тенты",
+    "image": "assets/ipoolgoo_catalog/lid_rect_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/lid_rect_01.jpg",
+      "assets/ipoolgoo_catalog/lid_rect_02.jpg"
+    ],
+    "size": "2 × 2 м / 5 × 3 м",
+    "form": "Прямоугольная крышка",
+    "depth": "—",
+    "desc": "Накрытие для прямоугольных бассейнов. Полезная допродажа к бассейнам, чтобы клиент сразу понимал, как ухаживать за водой.",
+    "features": [
+      "Защищает воду от пыли и листьев",
+      "Для прямоугольных бассейнов",
+      "Удобно при хранении и эксплуатации",
+      "Помогает реже чистить воду"
+    ],
+    "material": "ПВХ / Drop Stitch",
+    "warranty": "12 месяцев",
+    "thermo": "от -20°C до +80°C",
+    "install_time": "20–30 минут",
+    "badge": "Накрытие"
+  },
+  {
+    "title": "Лестница для бассейна IPOOLGO",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "LADDER-12-16",
+    "category": "Аксессуары",
+    "image": "assets/ipoolgoo_catalog/ladder_01.jpg",
+    "gallery": [
+      "assets/ipoolgoo_catalog/ladder_01.jpg"
+    ],
+    "size": "1,2 м / 1,6 м",
+    "form": "Лестница",
+    "depth": "—",
+    "desc": "Лестница для удобного входа и выхода из бассейна. Рекомендуется для глубоких моделей и семейного использования.",
+    "features": [
+      "Удобный вход и выход из бассейна",
+      "Подходит для глубоких чаш",
+      "Варианты высоты 1,2 м и 1,6 м",
+      "Рекомендуется как обязательный аксессуар к большим бассейнам"
+    ],
+    "material": "Металл / пластик",
+    "warranty": "12 месяцев",
+    "thermo": "для уличной эксплуатации",
+    "install_time": "5–10 минут",
+    "badge": "Аксессуар"
+  },
+  {
+    "title": "Песочный фильтр IPOOLGO 8000 л/час",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "SAND-8000",
+    "category": "Оборудование",
+    "image": "assets/ipoolgoo_catalog/sand_filter_01.webp",
+    "gallery": [
+      "assets/ipoolgoo_catalog/sand_filter_01.webp",
+      "assets/ipoolgoo_catalog/sand_filter_02.webp"
+    ],
+    "size": "8000 л/час",
+    "form": "Фильтр",
+    "depth": "—",
+    "desc": "Песочный фильтр для поддержания чистой воды в бассейне. Подходит для средних и больших чаш, когда нужна более серьёзная фильтрация.",
+    "features": [
+      "Производительность до 8000 л/час",
+      "Помогает поддерживать воду чистой",
+      "Рекомендуется для средних и больших бассейнов",
+      "Менеджер подберёт мощность под объём воды"
+    ],
+    "material": "Пластик / фильтрующая система",
+    "warranty": "12 месяцев",
+    "thermo": "уличное использование",
+    "install_time": "15–20 минут",
+    "badge": "Оборудование"
+  },
+  {
+    "title": "Электронасос IPOOLGO",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "EL-PUMP",
+    "category": "Оборудование",
+    "image": "assets/ipoolgoo_catalog/electric_pump_02.webp",
+    "gallery": [
+      "assets/ipoolgoo_catalog/electric_pump_02.webp",
+      "assets/ipoolgoo_catalog/electric_pump_01.webp"
+    ],
+    "size": "для бассейнов и SUP изделий",
+    "form": "Электронасос",
+    "depth": "—",
+    "desc": "Электронасос ускоряет накачивание бассейна, мебели и аксессуаров. Полезный товар для каждого заказа.",
+    "features": [
+      "Быстрое накачивание",
+      "Подходит для бассейнов и SUP изделий",
+      "Компактный размер",
+      "Упрощает установку без ручного насоса"
+    ],
+    "material": "Электрооборудование",
+    "warranty": "12 месяцев",
+    "thermo": "использовать по инструкции",
+    "install_time": "3–10 минут",
+    "badge": "Оборудование"
+  },
+  {
+    "title": "Тепловой насос для бассейна 3,5 кВт",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "HEAT-35",
+    "category": "Оборудование",
+    "image": "assets/ipoolgoo_catalog/heat_pump_01.webp",
+    "gallery": [
+      "assets/ipoolgoo_catalog/heat_pump_01.webp",
+      "assets/ipoolgoo_catalog/heat_pump_02.webp"
+    ],
+    "size": "3,5 кВт",
+    "form": "Тепловой насос",
+    "depth": "—",
+    "desc": "Тепловой насос помогает подогревать воду и продлевать сезон купания. Хорошее решение для клиентов, которые хотят комфортную температуру воды.",
+    "features": [
+      "Подогрев воды в бассейне",
+      "Помогает продлить сезон",
+      "Подбирается по объёму бассейна",
+      "Подходит для частных домов и дач"
+    ],
+    "material": "Тепловое оборудование",
+    "warranty": "12 месяцев",
+    "thermo": "уличное использование",
+    "install_time": "по инструкции",
+    "badge": "Подогрев"
+  },
+  {
+    "title": "Тепловой насос для бассейна 7 кВт",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "HEAT-70",
+    "category": "Оборудование",
+    "image": "assets/ipoolgoo_catalog/heat_pump_02.webp",
+    "gallery": [
+      "assets/ipoolgoo_catalog/heat_pump_02.webp",
+      "assets/ipoolgoo_catalog/heat_pump_01.webp"
+    ],
+    "size": "7 кВт",
+    "form": "Тепловой насос",
+    "depth": "—",
+    "desc": "Более мощный тепловой насос для крупных бассейнов. Добавлен в каталог, чтобы клиент мог сразу увидеть решение для подогрева воды.",
+    "features": [
+      "Для больших бассейнов",
+      "Подогрев воды",
+      "Подбор мощности под объём",
+      "Повышает комфорт использования"
+    ],
+    "material": "Тепловое оборудование",
+    "warranty": "12 месяцев",
+    "thermo": "уличное использование",
+    "install_time": "по инструкции",
+    "badge": "Подогрев"
+  },
+  {
+    "title": "Робот-пылесос для бассейна VERRO",
+    "price": 0,
+    "old_price": null,
+    "price_note": "Цена по запросу",
+    "article": "VERRO",
+    "category": "Оборудование",
+    "image": "assets/ipoolgoo_catalog/robot_01.webp",
+    "gallery": [
+      "assets/ipoolgoo_catalog/robot_01.webp",
+      "assets/ipoolgoo_catalog/robot_02.webp"
+    ],
+    "size": "для чистки бассейна",
+    "form": "Робот-пылесос",
+    "depth": "—",
+    "desc": "Робот-пылесос для автоматической очистки бассейна. Нужен для клиентов, которым важно меньше тратить времени на обслуживание.",
+    "features": [
+      "Автоматическая чистка бассейна",
+      "Подходит для ухода за дном и стенками",
+      "Уменьшает ручную уборку",
+      "Хорошая допродажа к крупным бассейнам"
+    ],
+    "material": "Робот для бассейна",
+    "warranty": "12 месяцев",
+    "thermo": "использовать по инструкции",
+    "install_time": "быстрый запуск",
+    "badge": "Скоро"
   }
 ];
