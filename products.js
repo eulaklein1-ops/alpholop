@@ -578,7 +578,7 @@ const PRODUCTS = [
     "title": "Фильтрационная установка Bestway FlowClear 58497, 5.6 м³/ч, D254",
     "price": 0,
     "old_price": 0,
-    "uah": ,
+    "uah": 0,
     "article": "filtracziya-standart",
     "category": "Насосы и фильтры",
     "image": "assets/images/p017_2addee.webp",
