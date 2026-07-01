@@ -36,5 +36,10 @@ products.js
 3. Включи Pages: Settings → Pages → Deploy from branch → main / root.
 4. Через несколько минут сайт откроется по ссылке GitHub Pages.
 
-## Favicon
-Добавлены иконки для всех устройств: favicon.ico, favicon.svg, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, android-chrome-192x192.png, android-chrome-512x512.png, site.webmanifest, browserconfig.xml.
+
+## Видео
+Добавлены локальные видео в папку `assets/video/`: обзор и распаковка бассейна. Видео открываются прямо на сайте без перехода на внешние сервисы.
+
+
+## Обновление
+Добавлены все товары из архива «готов басик», кроме товаров и раздела химии. Сохранены локальные видео и готовность для GitHub Pages.
