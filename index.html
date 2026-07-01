@@ -207,7 +207,7 @@ function renderSpecs(p){
   if(p.thermo) specs.push(['Термостойкость',p.thermo]);
   if(p.install_time) specs.push(['Монтаж',p.install_time]);
   if(p.warranty) specs.push(['Гарантия',p.warranty]);
-  specs.push(['Наличие',Number(p.price)>0?'В наличии':'По запросу'],['Доставка','По Казахстану'],['Оплата','Kaspi / Рассрочка / Карта']);
+  specs.push(['Наличие',Number(p.price)>0?'В наличии':'По запросу'],['Доставка','По Казахстану'],['Оплата','Kaspi / / Рассрочка / Карта']);
   return specs.map(([k,v])=>`<div class="spec"><span>${k}</span><b>${v}</b></div>`).join('');
 }
 
