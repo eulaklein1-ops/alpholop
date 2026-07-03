@@ -68,13 +68,48 @@
     @keyframes tgMarqueeMove{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
     @media(max-width:480px){.tgMarquee{font-size:13px;border-radius:16px;margin-top:10px}.tgMarqueeTrack{padding:11px 0;gap:30px;animation-duration:17s}.tgMarquee b{padding:4px 8px}}
 
-</style>
+
+    .reviewsSection{background:linear-gradient(180deg,#f4fbff 0%,#fff 100%);border-top:1px solid #e5f1ff;border-bottom:1px solid #e5f1ff}
+    .reviewsTop{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;margin-bottom:12px}.reviewsTop h2{margin:0;font-size:25px;letter-spacing:-.7px}.reviewsTop p{margin:6px 0 0;color:#475467;line-height:1.45;font-size:14px}.reviewControls{display:flex;gap:8px;flex-shrink:0}.reviewControls button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:22px;font-weight:900;color:#0b2346;box-shadow:0 6px 18px rgba(15,36,70,.08)}
+    .reviewsRail{display:flex;gap:13px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;scrollbar-width:none}.reviewsRail::-webkit-scrollbar{display:none}.reviewCard{scroll-snap-align:start;min-width:84%;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 28px rgba(15,36,70,.08);overflow:hidden;cursor:pointer}.reviewCard:active{transform:scale(.995)}
+    .reviewMedia{height:275px;background:#edf6ff;position:relative;display:block;overflow:hidden}.reviewMedia img,.reviewMedia video{width:100%;height:100%;object-fit:cover;display:block}.reviewMedia video{background:#08224a}.reviewTag{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.93);border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900;color:#0b2346}.reviewWatermark{position:absolute;right:12px;bottom:12px;background:rgba(6,38,78,.68);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 12px;font-weight:900;font-size:13px;letter-spacing:.5px}.playBadge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(8,34,74,.86);color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 28px rgba(0,0,0,.22);pointer-events:none}
+    .reviewBody{padding:14px}.reviewBody b{display:block;font-size:17px;margin-bottom:5px}.stars{color:#ffb800;letter-spacing:1px;font-size:15px;margin-bottom:7px}.reviewBody p{margin:0;color:#344054;line-height:1.45;font-size:14px}.reviewMeta{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;color:#667085;font-size:12px;font-weight:800}.reviewCta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.reviewCta a{border-radius:13px;padding:11px 8px;text-align:center;font-weight:900;text-decoration:none}.reviewCta .wa{background:#12b76a;color:#fff}.reviewCta .tg{background:#27a7e7;color:#fff}.reviewsHint{background:#eaf7ff;border:1px solid #c7edff;border-radius:18px;padding:13px;margin-top:10px;color:#17445f;line-height:1.45;font-size:14px}
+    .reviewModal{position:fixed;inset:0;background:rgba(2,12,28,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:12px}.reviewModal.open{display:flex}.reviewModalBox{width:min(980px,100%);max-height:94vh;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35);display:flex;flex-direction:column}.reviewModalHead{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 14px;border-bottom:1px solid var(--line)}.reviewModalHead b{font-size:17px}.reviewModalClose{width:44px;height:44px;border-radius:14px;border:0;background:#f1f5f9;font-size:24px;font-weight:900}.reviewModalMedia{position:relative;background:#061d3a;display:grid;place-items:center;max-height:72vh;overflow:auto}.reviewModalMedia img{width:100%;height:auto;max-height:72vh;object-fit:contain;display:block}.reviewModalMedia video{width:100%;max-height:72vh;display:block;background:#061d3a}.reviewModalWatermark{position:absolute;right:14px;bottom:14px;background:rgba(6,38,78,.72);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 13px;font-weight:900;letter-spacing:.5px}.reviewModalFoot{padding:12px 14px;color:#344054;line-height:1.45}.reviewModalBtns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}.reviewModalBtns button,.reviewModalBtns a{border:0;border-radius:13px;padding:12px 8px;font-weight:900;text-align:center;text-decoration:none}.reviewModalBtns button{background:#eaf4ff;color:#1268ff}.reviewModalBtns .wa{background:#12b76a;color:#fff}.reviewModalBtns .tg{background:#27a7e7;color:#fff}
+    @media(min-width:760px){.reviewCard{min-width:31.5%}.reviewMedia{height:310px}.reviewsTop h2{font-size:32px}.reviewModalBox{border-radius:28px}.reviewModalHead b{font-size:20px}}
+
+  
+    .reviewModalMedia:after{content:'Нажмите ▶ если видео не запустилось автоматически';position:absolute;left:50%;bottom:12px;transform:translateX(-50%);background:rgba(6,38,78,.72);color:#fff;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;pointer-events:none;opacity:.92}
+    .reviewModalMedia:has(img):after{display:none}
+    .reviewModalMedia video{object-fit:contain}
+
+  
+    .quickNav{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .quickNav a{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 10px;font-size:13px;font-weight:900;color:#0b2346;text-align:center;text-decoration:none;box-shadow:0 5px 16px rgba(0,0,0,.04)}
+    .quickNav a.reviewHot{background:linear-gradient(135deg,#fff7e6,#eaf7ff);border-color:#bfe8ff;color:#0b54c6}
+    @media(min-width:760px){.quickNav{grid-template-columns:repeat(4,1fr);max-width:680px}}
+
+  
+    .bottomNav .navItem{display:flex;align-items:center;justify-content:center;min-height:42px;text-decoration:none}
+    .quickNav a.reviewHot{background:linear-gradient(135deg,#1268ff,#27a7e7)!important;color:#fff!important;border-color:#1268ff!important}
+
+  
+    .paymentProof{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+    .paymentProofCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(15,36,70,.06)}
+    .paymentProofCard b{display:block;margin-bottom:5px;color:#0b2346}.paymentProofCard p{margin:0;color:#344054;line-height:1.45;font-size:14px}
+    @media(min-width:760px){.paymentProof{grid-template-columns:repeat(3,1fr)}}
+
+  </style>
 </head>
 <body>
-<div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77029530715">WhatsApp: +7 702 953 07 15</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
+<div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77029530715">WhatsApp: +7 702 953 07 15</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
   <header><div class="wrap head"><a class="logo" href="#top"><span>IPOO</span>LGO<small>БАССЕЙНЫ И АКСЕССУАРЫ</small></a><div class="search"><input id="search" placeholder="Поиск товаров..."><b>⌕</b></div><button class="iconBtn" onclick="openCart()">🛒<span class="badge" id="cartCount">0</span></button></div></header>
   <main id="top">
-    <section class="hero"><div class="wrap"><div class="heroBox"><h1>Бассейны и аксессуары <span>для отдыха дома</span></h1><p>Каркасные бассейны IPOOLGO, фильтры, аксессуары и комплектующие. Быстрая консультация и доставка по Казахстану.</p><div class="ctaRow"><a class="btn primary" href="#catalog">Смотреть каталог</a><a class="btn ghost" href="https://wa.me/77029530715">WhatsApp +7 702 953 07 15</a><a class="btn telegram" href="https://t.me/ipolgoo">Telegram @ipolgoo</a></div><div class="chips"><div class="chip">✅ Гарантия</div><div class="chip">🚚 Доставка РК</div><div class="chip">💳 Kaspi / рассрочка</div><div class="chip">🛟 Подбор размера</div></div><a class="tgMarquee" href="https://t.me/ipolgoo" target="_blank" rel="noopener" aria-label="Открыть Telegram @ipolgoo">
+    <section class="hero"><div class="wrap"><div class="heroBox"><h1>Бассейны и аксессуары <span>для отдыха дома</span></h1><p>Каркасные бассейны IPOOLGO, фильтры, аксессуары и комплектующие. Быстрая консультация и доставка по Казахстану.</p><div class="ctaRow"><a class="btn primary" href="#catalog">Смотреть каталог</a><a class="btn ghost" href="#reviews" onclick="goToReviews(event)">⭐ Отзывы клиентов</a><a class="btn ghost" href="https://wa.me/77029530715">WhatsApp +7 702 953 07 15</a><a class="btn telegram" href="https://t.me/ipolgoo">Telegram @ipolgoo</a></div><div class="chips"><div class="chip">✅ Гарантия</div><div class="chip">🚚 Доставка РК</div><div class="chip">💳 Kaspi / рассрочка</div><div class="chip">🛟 Подбор размера</div></div><div class="quickNav">
+      <a href="#catalog">🛒 Каталог</a>
+      <a href="#reviews" class="reviewHot" onclick="goToReviews(event)">⭐ Отзывы</a>
+      <a href="#pool-guide">ℹ️ Установка</a>
+      <a href="#contacts">💬 Контакты</a>
+    </div><a class="tgMarquee" href="https://t.me/ipolgoo" target="_blank" rel="noopener" aria-label="Открыть Telegram @ipolgoo">
     <div class="tgMarqueeTrack">
       <span>⚠️ Если вам долго не отвечают в WhatsApp — напишите в Telegram <b>Открыть Telegram</b></span>
       <span>⚠️ Если вам долго не отвечают в WhatsApp — напишите в Telegram <b>Открыть Telegram</b></span>
@@ -175,15 +210,103 @@
         </div>
       </div>
     </div></section>
-    <section class="section" id="guarantee"><div class="wrap"><div class="titleRow"><h2>Почему выбирают нас</h2></div><div class="trust"><div class="trustItem"><div class="trustIcon">🛟</div><div><b>Подбор бассейна</b><span>Поможем выбрать размер под участок</span></div></div><div class="trustItem"><div class="trustIcon">🚚</div><div><b>Доставка по Казахстану</b><span>Алматы, Астана, Шымкент и другие города</span></div></div><div class="trustItem"><div class="trustIcon">💳</div><div><b>Kaspi / рассрочка</b><span>Удобная оплата для клиента</span></div></div><div class="trustItem"><div class="trustIcon">✅</div><div><b>Гарантия</b><span>Официальная гарантия на товар</span></div></div></div></div></section>
+    
+    
     <section class="section" id="delivery"><div class="wrap"><div class="delivery"><h2>Доставка и консультация</h2><p>Оставьте заявку, менеджер подберет бассейн по размеру участка, рассчитает доставку и комплектацию.</p><div class="contactNote"><b>Основной канал — WhatsApp.</b> Если WhatsApp не откроется или будет недоступен, клиент может сразу написать в Telegram: <a class="telegramInline" href="https://t.me/ipolgoo">@ipolgoo</a>.</div><div class="form"><input id="leadName" placeholder="Ваше имя"><input id="leadPhone" placeholder="Телефон"><textarea id="leadMsg" placeholder="Какой размер бассейна нужен?"></textarea><button class="btn primary" onclick="sendLead()">Отправить в WhatsApp</button><button class="btn telegram" onclick="sendLeadTelegram()">Написать в Telegram</button></div></div></div></section>
   </main>
   <footer id="contacts"><div class="wrap"><h2>IPOOLGO Kazakhstan</h2><p>Бассейны, аксессуары, фильтры и комплектующие для воды. WhatsApp: <a href="https://wa.me/77029530715">+7 702 953 07 15</a>. Telegram: <a href="https://t.me/ipolgoo">@ipolgoo</a>.</p></div></footer>
-  <div class="bottomNav"><a class="navItem" href="#catalog">Каталог</a><a class="navItem" href="#pool-guide">Инфо</a><a class="navItem" href="https://wa.me/77029530715">WhatsApp</a><a class="navItem telegram" href="https://t.me/ipolgoo">Telegram</a><button class="navItem primary" onclick="openCart()">Корзина <span id="cartCount2">0</span></button></div>
+<div class="bottomNav">
+    <a class="navItem" href="#catalog">Каталог</a>
+    <a class="navItem" href="#reviews" onclick="goToReviews(event)">Отзывы</a>
+    <a class="navItem" href="https://wa.me/77029530715">WhatsApp</a>
+    <a class="navItem telegram" href="https://t.me/ipolgoo">Telegram</a>
+    <button class="navItem primary" onclick="openCart()">Корзина <span id="cartCount2">0</span></button>
+  </div>
   <div class="drawer" id="drawer" onclick="if(event.target.id==='drawer')closeCart()"><div class="panel"><div class="panelHead"><h2>Корзина</h2><button class="close" onclick="closeCart()">✕</button></div><div id="cartList"></div><div class="total"><span>Итого</span><span id="cartTotal">0 ₸</span></div><div class="cartButtons"><button class="btn primary" onclick="checkout()">Оформить заказ в WhatsApp</button><button class="btn telegram" onclick="checkoutTelegram()">Написать менеджеру в Telegram</button></div></div></div>
   <div class="detail" id="detail" onclick="if(event.target.id==='detail')closeProduct()"><div class="detailPanel"><div class="panelHead"><h2>Карточка товара</h2><button class="close" onclick="closeProduct()">✕</button></div><div id="productDetail"></div></div></div>
   <div class="photoViewer" id="photoViewer" onclick="if(event.target.id==='photoViewer')closePhotoViewer()"><button class="viewerClose" onclick="closePhotoViewer()">✕</button><button class="viewerArrow left" onclick="changePhoto(-1,event)">‹</button><img class="viewerImg" id="viewerImg" alt="Фото товара"><button class="viewerArrow right" onclick="changePhoto(1,event)">›</button><div class="viewerCounter" id="viewerCounter">1 / 1</div></div>
 <script src="products.js"></script>
+  <script>
+    const reviewItems = [{"type": "video", "src": "assets/reviews/review_video_01.mp4", "poster": "assets/reviews/review_video_01_poster.webp", "title": "Подобрали размер без проблем", "desc": "Заказывали бассейн во двор. Вживую выглядит даже лучше, чем на фото. Менеджер помог подобрать размер, всё подробно объяснил.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_02.mp4", "poster": "assets/reviews/review_video_02_poster.webp", "title": "Вживую выглядит ещё лучше", "desc": "Очень понравилось, что перед заказом отправили отзывы других людей . Стало спокойнее выбирать, и в итоге всё подошло.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_03.mp4", "poster": "assets/reviews/review_video_03_poster.webp", "title": "Взяли в рассрочку Kaspi", "desc": "Взяли через Kaspi в рассрочку. Удобно, что можно было оформить без лишней спешки и спокойно выбрать нужный размер.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_04.mp4", "poster": "assets/reviews/review_video_04_poster.webp", "title": "Пришло аккуратно упаковано", "desc": "Покупали для дачи. Бассейн пришёл аккуратно упакованный, по внешнему виду всё понравилось.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_05.mp4", "poster": "assets/reviews/review_video_05_poster.webp", "title": "Менеджер помог с выбором", "desc": "Перед заказом долго выбирали размер, потому что участок небольшой. Менеджер подсказал, какой вариант лучше подойдёт.", "tag": "Видеоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_01.webp", "poster": "assets/reviews/review_photo_01.webp", "title": "Красиво смотрится на участке", "desc": "Брали купель для зоны отдыха. Смотрится очень красиво, материал плотный, вживую всё выглядит качественно.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_02.webp", "poster": "assets/reviews/review_photo_02.webp", "title": "Без спешки и лишнего давления", "desc": "Понравилось, что менеджер нормально отвечает и не торопит. Сначала всё показали, потом уже оформили заказ.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_03.webp", "poster": "assets/reviews/review_photo_03.webp", "title": "Отправили живые фото и видео других отзывов", "desc": "Попросили живые фото и видео — нам всё отправили. После этого уже было намного легче принять решение.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_04.webp", "poster": "assets/reviews/review_photo_04.webp", "title": "Для семьи отличный вариант", "desc": "Заказывали для семьи. Дети довольны, взрослым тоже нравится. Хороший вариант для двора и отдыха летом.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_05.webp", "poster": "assets/reviews/review_photo_05.webp", "title": "Всё пришло без проблем", "desc": "Брали 3 бассейна и еще аксессуары и комплектующие. Всё пришло в нормальной упаковке, без неприятных сюрпризов.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_06.webp", "poster": "assets/reviews/review_photo_06.webp", "title": "Kaspi оформили спокойно", "desc": "Оформили бассейн в рассрочку через Kaspi. Всё прошло спокойно, менеджер подсказал по оформлению.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_07.webp", "poster": "assets/reviews/review_photo_07.webp", "title": "Отзывы помогли решиться", "desc": "Очень помог раздел с отзывами и реальные фото клиентов. Благодаря этому решились на заказ.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_08.webp", "poster": "assets/reviews/review_photo_08.webp", "title": "Менеджер был на связи", "desc": "Заказали бассейн на участок. Менеджер был на связи и после оформления, подсказал по установке и уходу.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_09.webp", "poster": "assets/reviews/review_photo_09.webp", "title": "Материал понравился вживую", "desc": "Понравилось, как выглядит материал вживую. На фото одно, а в реальности всё смотрится ещё аккуратнее.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_10.webp", "poster": "assets/reviews/review_photo_10.webp", "title": "Подошло для зоны отдыха", "desc": "Брали мебель для зоны отдыха. Хорошо подошла по стилю, смотрится современно и аккуратно.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_11.webp", "poster": "assets/reviews/review_photo_11.webp", "title": "Всё объяснили понятно", "desc": "Купили после консультации с менеджером. Всё объяснили простыми словами, без лишней путаницы.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_12.webp", "poster": "assets/reviews/review_photo_12.webp", "title": "Подобрали размер без проблем", "desc": "Выбрали размер после того, как менеджер задал пару вопросов по участку. Это реально упростило выбор.", "tag": "Фотоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_06.mp4", "poster": "assets/reviews/review_video_06_poster.webp", "title": "Вживую выглядит ещё лучше", "desc": "Перед оформлением отправили отзывы и фото заказов. Понравилось, что всё прозрачно и без спешки.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_07.mp4", "poster": "assets/reviews/review_video_07_poster.webp", "title": "Взяли в рассрочку Kaspi", "desc": "Заказывали для дома. Выглядит достойно, материал крепкий, по внешнему виду всё понравилось.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_08.mp4", "poster": "assets/reviews/review_video_08_poster.webp", "title": "Пришло аккуратно упаковано", "desc": "Сначала сомневались, но после общения с менеджером стало намного спокойнее. Видно, что помогают, а не просто продают.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_09.mp4", "poster": "assets/reviews/review_video_09_poster.webp", "title": "Менеджер помог с выбором", "desc": "Бассейн пришёл в хорошей упаковке. Внешний вид соответствует тому, что показывали на фото и видео.", "tag": "Видеоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_13.webp", "poster": "assets/reviews/review_photo_13.webp", "title": "Красиво смотрится на участке", "desc": "Выбрали прямоугольный бассейн. Хорошо подошёл под наш участок, смотрится аккуратно и современно.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_14.webp", "poster": "assets/reviews/review_photo_14.webp", "title": "Без спешки и лишнего давления", "desc": "Понравилось, что никто не давил с покупкой. Можно спокойно спросить, посмотреть варианты и уже потом решать.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_15.webp", "poster": "assets/reviews/review_photo_15.webp", "title": "Отправили живые фото и видео других отзывов", "desc": "Заказывали для двора. Доставка и оформление прошли нормально, менеджер отвечал по делу и быстро.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_16.webp", "poster": "assets/reviews/review_photo_16.webp", "title": "Для семьи отличный вариант", "desc": "Брали комплект для отдыха у воды. Всё пришло без проблем, материал понравился.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_17.webp", "poster": "assets/reviews/review_photo_17.webp", "title": "Всё пришло без проблем", "desc": "Спасибо менеджеру за подбор. Подсказали по размеру, по глубине и по тому, что лучше для семьи.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_18.webp", "poster": "assets/reviews/review_photo_18.webp", "title": "Kaspi оформили спокойно", "desc": "Перед заказом попросили ещё фото — всё быстро отправили. После этого уже спокойно оформили покупку.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_19.webp", "poster": "assets/reviews/review_photo_19.webp", "title": "Отзывы помогли решиться", "desc": "Заказали после просмотра видеоотзывов. Очень помогло увидеть товар не только на красивых фото, но и в реальности.", "tag": "Фотоотзыв"}];
+    let activeReview = 0;
+    
+    function goToReviews(e){
+      if(e) e.preventDefault();
+      const block = document.getElementById('reviews');
+      if(block){
+        block.scrollIntoView({behavior:'smooth', block:'start'});
+        history.replaceState(null, '', '#reviews');
+      }
+    }
+
+    function scrollReviews(dir){
+      const rail = document.getElementById('reviewsRail');
+      if(!rail) return;
+      const card = rail.querySelector('.reviewCard');
+      const step = card ? card.offsetWidth + 14 : 320;
+      rail.scrollBy({left: dir * step, behavior:'smooth'});
+    }
+    function openReview(index){
+      activeReview = index;
+      const item = reviewItems[index];
+      const modal = document.getElementById('reviewModal');
+      const media = document.getElementById('reviewModalMedia');
+      const title = document.getElementById('reviewModalTitle');
+      const text = document.getElementById('reviewModalText');
+      if(!item || !modal || !media) return;
+      title.textContent = item.title;
+      text.textContent = item.desc;
+      if(item.type === 'video'){
+        media.innerHTML = `<video id="reviewModalVideo" controls playsinline webkit-playsinline preload="metadata" poster="${item.poster}"><source src="${item.src}" type="video/mp4"></video><span class="reviewModalWatermark">Telegram: @ipolgoo</span>`;
+      } else {
+        media.innerHTML = `<img src="${item.src}" alt="${item.title}"><span class="reviewModalWatermark">Telegram: @ipolgoo</span>`;
+      }
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      const video = document.getElementById('reviewModalVideo');
+      if(video){
+        setTimeout(()=>{ video.play().catch(()=>{}); }, 120);
+      }
+    }
+    function closeReview(e){
+      if(e && e.target && e.target.id !== 'reviewModal') return;
+      const modal = document.getElementById('reviewModal');
+      const media = document.getElementById('reviewModalMedia');
+      if(modal) modal.classList.remove('open');
+      if(media) media.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+    function reviewStep(dir){
+      activeReview = (activeReview + dir + reviewItems.length) % reviewItems.length;
+      openReview(activeReview);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('.reviewCard[data-review-index]').forEach(function(card){
+        card.addEventListener('click', function(e){
+          if(e.target.closest('a')) return;
+          const index = Number(card.getAttribute('data-review-index'));
+          if(!Number.isNaN(index)) openReview(index);
+        });
+        card.addEventListener('keydown', function(e){
+          if(e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            const index = Number(card.getAttribute('data-review-index'));
+            if(!Number.isNaN(index)) openReview(index);
+          }
+        });
+      });
+    });
+
+    document.addEventListener('keydown', function(e){
+      const modal = document.getElementById('reviewModal');
+      if(!modal || !modal.classList.contains('open')) return;
+      if(e.key === 'Escape') closeReview();
+      if(e.key === 'ArrowLeft') reviewStep(-1);
+      if(e.key === 'ArrowRight') reviewStep(1);
+    });
+
+  </script>
 <script>
 const WA_PHONE="77029530715";
 const TG_URL="https://t.me/ipolgoo";
@@ -245,5 +368,311 @@ function resetFilters(){current='Все'; search.value=''; drawCats(); drawCatGr
 search.addEventListener('input',drawProducts); drawCats(); drawCatGrid(); drawProducts(); updateCount();
 if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODUCTS.some(p=>p.article===art)) setTimeout(()=>openProduct(art),200)}
 </script>
+
+  <div class="reviewModal" id="reviewModal" onclick="closeReview(event)">
+    <div class="reviewModalBox" onclick="event.stopPropagation()">
+      <div class="reviewModalHead"><b id="reviewModalTitle">Отзыв клиента</b><button class="reviewModalClose" onclick="closeReview()">×</button></div>
+      <div class="reviewModalMedia" id="reviewModalMedia"></div>
+      <div class="reviewModalFoot"><div id="reviewModalText"></div><div class="reviewModalBtns"><button type="button" onclick="reviewStep(-1)">‹ Назад</button><button type="button" onclick="reviewStep(1)">Дальше ›</button><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div></div>
+    </div>
+  </div>
+
 </body>
 </html>
+<section class="section reviewsSection" id="reviews">
+      <div class="wrap">
+        <div class="reviewsTop">
+          <div>
+            <h2>Отзывы клиентов</h2>
+            <p>Реальные фото и видео клиентов. Здесь можно посмотреть и почитать живые отзывы: про выбор размера, качество, доставку, общение с менеджером и опыт покупки.</p>
+          </div>
+          <div class="reviewControls"><button type="button" onclick="scrollReviews(-1)">‹</button><button type="button" onclick="scrollReviews(1)">›</button></div>
+        </div>
+        <div class="reviewsRail" id="reviewsRail">
+
+          <article class="reviewCard" data-review-index="0" tabindex="0" role="button" aria-label="Открыть отзыв: Подобрали размер без проблем">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_01_poster.webp"><source src="assets/reviews/review_video_01.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Подобрали размер без проблем</b>
+              <div class="stars">★★★★★</div>
+              <p>Заказывали бассейн во двор. Вживую выглядит даже лучше, чем на фото. Менеджер помог подобрать размер, всё подробно объяснил.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="1" tabindex="0" role="button" aria-label="Открыть отзыв: Вживую выглядит ещё лучше">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_02_poster.webp"><source src="assets/reviews/review_video_02.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Вживую выглядит ещё лучше</b>
+              <div class="stars">★★★★★</div>
+              <p>Очень понравилось, что перед заказом отправили отзывы других людей . Стало спокойнее выбирать, и в итоге всё подошло.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="2" tabindex="0" role="button" aria-label="Открыть отзыв: Взяли в рассрочку Kaspi">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_03_poster.webp"><source src="assets/reviews/review_video_03.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Взяли в рассрочку Kaspi</b>
+              <div class="stars">★★★★★</div>
+              <p>Взяли через Kaspi в рассрочку. Удобно, что можно было оформить без лишней спешки и спокойно выбрать нужный размер.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="3" tabindex="0" role="button" aria-label="Открыть отзыв: Пришло аккуратно упаковано">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_04_poster.webp"><source src="assets/reviews/review_video_04.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Пришло аккуратно упаковано</b>
+              <div class="stars">★★★★★</div>
+              <p>Покупали для дачи. Бассейн пришёл аккуратно упакованный, по внешнему виду всё понравилось.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="4" tabindex="0" role="button" aria-label="Открыть отзыв: Менеджер помог с выбором">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_05_poster.webp"><source src="assets/reviews/review_video_05.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Менеджер помог с выбором</b>
+              <div class="stars">★★★★★</div>
+              <p>Перед заказом долго выбирали размер, потому что участок небольшой. Менеджер подсказал, какой вариант лучше подойдёт.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="5" tabindex="0" role="button" aria-label="Открыть отзыв: Красиво смотрится на участке">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_01.webp" alt="Красиво смотрится на участке" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Красиво смотрится на участке</b>
+              <div class="stars">★★★★★</div>
+              <p>Брали купель для зоны отдыха. Смотрится очень красиво, материал плотный, вживую всё выглядит качественно.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="6" tabindex="0" role="button" aria-label="Открыть отзыв: Без спешки и лишнего давления">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_02.webp" alt="Без спешки и лишнего давления" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Без спешки и лишнего давления</b>
+              <div class="stars">★★★★★</div>
+              <p>Понравилось, что менеджер нормально отвечает и не торопит. Сначала всё показали, потом уже оформили заказ.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="7" tabindex="0" role="button" aria-label="Открыть отзыв: Отправили живые фото и видео">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_03.webp" alt="Отправили живые фото и видео" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Отправили живые фото и видео других отзывов</b>
+              <div class="stars">★★★★★</div>
+              <p>Попросили живые фото и видео и нам отправили отзывы людей. После этого уже было намного легче принять решение и оплатить полную сумму.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="8" tabindex="0" role="button" aria-label="Открыть отзыв: Для семьи отличный вариант">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_04.webp" alt="Для семьи отличный вариант" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Для семьи отличный вариант</b>
+              <div class="stars">★★★★★</div>
+              <p>Заказывали для семьи. Дети довольны, взрослым тоже нравится. Хороший вариант для двора и отдыха летом.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="9" tabindex="0" role="button" aria-label="Открыть отзыв: Всё пришло без проблем">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_05.webp" alt="Всё пришло без проблем" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Всё пришло без проблем</b>
+              <div class="stars">★★★★★</div>
+              <p>Брали 3 бассейна и еще аксессуары и комплектующие. Всё пришло в нормальной упаковке, без неприятных сюрпризов.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="10" tabindex="0" role="button" aria-label="Открыть отзыв: Kaspi оформили спокойно">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_06.webp" alt="Kaspi оформили спокойно" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Kaspi оформили спокойно</b>
+              <div class="stars">★★★★★</div>
+              <p>Оформили бассейн в рассрочку через Kaspi. Всё прошло спокойно, менеджер подсказал по оформлению.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="11" tabindex="0" role="button" aria-label="Открыть отзыв: Отзывы помогли решиться">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_07.webp" alt="Отзывы помогли решиться" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Отзывы помогли решиться</b>
+              <div class="stars">★★★★★</div>
+              <p>Очень помог раздел с отзывами и реальные фото клиентов. Благодаря этому решились на заказ.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="12" tabindex="0" role="button" aria-label="Открыть отзыв: Менеджер был на связи">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_08.webp" alt="Менеджер был на связи" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Менеджер был на связи</b>
+              <div class="stars">★★★★★</div>
+              <p>Заказали бассейн на участок. Менеджер был на связи и после оформления, подсказал по установке и уходу.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="13" tabindex="0" role="button" aria-label="Открыть отзыв: Материал понравился вживую">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_09.webp" alt="Материал понравился вживую" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Материал понравился вживую</b>
+              <div class="stars">★★★★★</div>
+              <p>Понравилось, как выглядит материал вживую. На фото одно, а в реальности всё смотрится ещё аккуратнее.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="14" tabindex="0" role="button" aria-label="Открыть отзыв: Подошло для зоны отдыха">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_10.webp" alt="Подошло для зоны отдыха" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Подошло для зоны отдыха</b>
+              <div class="stars">★★★★★</div>
+              <p>Брали мебель для зоны отдыха. Хорошо подошла по стилю, смотрится современно и аккуратно.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="15" tabindex="0" role="button" aria-label="Открыть отзыв: Всё объяснили понятно">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_11.webp" alt="Всё объяснили понятно" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Всё объяснили понятно</b>
+              <div class="stars">★★★★★</div>
+              <p>Купили после консультации с менеджером. Всё объяснили простыми словами, без лишней путаницы.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="16" tabindex="0" role="button" aria-label="Открыть отзыв: Подобрали размер без проблем">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_12.webp" alt="Подобрали размер без проблем" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Подобрали размер без проблем</b>
+              <div class="stars">★★★★★</div>
+              <p>Выбрали размер после того, как менеджер задал пару вопросов по участку. Это реально упростило выбор.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="17" tabindex="0" role="button" aria-label="Открыть отзыв: Вживую выглядит ещё лучше">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_06_poster.webp"><source src="assets/reviews/review_video_06.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Вживую выглядит ещё лучше</b>
+              <div class="stars">★★★★★</div>
+              <p>Понравилось, что всё прозрачно и без спешки.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="18" tabindex="0" role="button" aria-label="Открыть отзыв: Взяли в рассрочку Kaspi">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_07_poster.webp"><source src="assets/reviews/review_video_07.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Взяли в рассрочку Kaspi</b>
+              <div class="stars">★★★★★</div>
+              <p>Заказывали для базы отдыха. Выглядит достойно, материал крепкий, по внешнему виду всё понравилось.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="19" tabindex="0" role="button" aria-label="Открыть отзыв: Пришло аккуратно упаковано">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_08_poster.webp"><source src="assets/reviews/review_video_08.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Пришло аккуратно упаковано</b>
+              <div class="stars">★★★★★</div>
+              <p>Сначала сомневались, но после общения с менеджером стало намного спокойнее. Видно, что помогают, а не просто продают.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="20" tabindex="0" role="button" aria-label="Открыть отзыв: Менеджер помог с выбором">
+            <div class="reviewMedia"><video playsinline preload="metadata" poster="assets/reviews/review_video_09_poster.webp"><source src="assets/reviews/review_video_09.mp4" type="video/mp4"></video><span class="playBadge">▶</span><span class="reviewTag">Видеоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Менеджер помог с выбором</b>
+              <div class="stars">★★★★★</div>
+              <p>Бассейн пришёл в хорошей упаковке. Внешний вид соответствует тому, что показывали на фото и видео.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="21" tabindex="0" role="button" aria-label="Открыть отзыв: Красиво смотрится на участке">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_13.webp" alt="Красиво смотрится на участке" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Красиво смотрится на участке</b>
+              <div class="stars">★★★★★</div>
+              <p>Выбрали прямоугольный бассейн. Хорошо подошёл под наш участок, смотрится аккуратно и современно.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="22" tabindex="0" role="button" aria-label="Открыть отзыв: Без спешки и лишнего давления">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_14.webp" alt="Без спешки и лишнего давления" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Без спешки и лишнего давления</b>
+              <div class="stars">★★★★★</div>
+              <p>Понравилось, что никто не давил с покупкой. Можно спокойно спросить, посмотреть варианты и уже потом решать.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="23" tabindex="0" role="button" aria-label="Открыть отзыв: Отправили живые фото и видео отзывов других  ">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_15.webp" alt="Отправили живые фото и видео из отзывов других " loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Отправили живые фото и видео из отзывов других </b>
+              <div class="stars">★★★★★</div>
+              <p>Заказывали для двора. Доставка и оформление прошли нормально, менеджер отвечал по делу и быстро.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="24" tabindex="0" role="button" aria-label="Открыть отзыв: Для семьи отличный вариант">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_16.webp" alt="Для семьи отличный вариант" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Для семьи отличный вариант</b>
+              <div class="stars">★★★★★</div>
+              <p>Брали комплект для отдыха у воды. Всё пришло без проблем, материал понравился.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="25" tabindex="0" role="button" aria-label="Открыть отзыв: Всё пришло без проблем">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_17.webp" alt="Всё пришло без проблем" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Всё пришло без проблем</b>
+              <div class="stars">★★★★★</div>
+              <p>Спасибо менеджеру за подбор. Подсказали по размеру, по глубине и по тому, что лучше для семьи.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="26" tabindex="0" role="button" aria-label="Открыть отзыв: Kaspi оформили спокойно">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_18.webp" alt="Kaspi оформили спокойно" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Kaspi оформили спокойно</b>
+              <div class="stars">★★★★★</div>
+              <p>Перед заказом попросили ещё фото — всё быстро отправили. После этого уже спокойно оформили покупку.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+          <article class="reviewCard" data-review-index="27" tabindex="0" role="button" aria-label="Открыть отзыв: Отзывы помогли решиться">
+            <div class="reviewMedia"><img src="assets/reviews/review_photo_19.webp" alt="Отзывы помогли решиться" loading="lazy"><span class="reviewTag">Фотоотзыв</span><span class="reviewWatermark">Telegram: @ipolgoo</span></div>
+            <div class="reviewBody">
+              <b>Отзывы помогли решиться</b>
+              <div class="stars">★★★★★</div>
+              <p>Заказали после просмотра видеоотзывов. Очень помогло увидеть товар не только на красивых фото, но и в реальности.</p>
+              <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77029530715">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+            </div>
+          </article>
+        </div>
+        <div class="reviewsHint"><b>Отзывы клиентов:</b> здесь собраны реальные фото и видео, а также короткие живые комментарии про заказ, подбор размера, доставку и общее впечатление от покупки.</div>
+      </div>
+    </section>
+
+<section class="section" id="guarantee"><div class="wrap"><div class="titleRow"><h2>Почему выбирают нас</h2></div><div class="trust"><div class="trustItem"><div class="trustIcon">🛟</div><div><b>Подбор бассейна</b><span>Поможем выбрать размер под участок</span></div></div><div class="trustItem"><div class="trustIcon">🚚</div><div><b>Доставка по Казахстану</b><span>Алматы, Астана, Шымкент и другие города</span></div></div><div class="trustItem"><div class="trustIcon">💳</div><div><b>Kaspi / рассрочка</b><span>Удобная оплата для клиента</span></div></div><div class="trustItem"><div class="trustIcon">✅</div><div><b>Гарантия</b><span>Официальная гарантия на товар</span></div></div></div></div></section>
