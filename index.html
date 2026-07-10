@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>IPOOLGO Kazakhstan — бассейны и аксессуары</title>
   <meta name="description" content="Каркасные бассейны IPOOLGO, аксессуары, фильтры и комплектующие. Доставка по Казахстану.">
+  <meta name="theme-color" content="#0a6e72">
+  <link rel="icon" type="image/png" href="assets/logo-ipoolgo-mark.png">
+  <link rel="apple-touch-icon" href="assets/logo-ipoolgo-mark.png">
   <style>
     :root{--blue:#1268ff;--dark:#07172e;--soft:#f3f8ff;--muted:#667085;--line:#e7edf5;--green:#13b65a;--radius:20px;--shadow:0 10px 32px rgba(15,36,70,.10)}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--dark);background:#fff;padding-bottom:86px} a{color:inherit;text-decoration:none} button,input,textarea{font:inherit} img{display:block}
@@ -99,12 +102,239 @@
     @media(min-width:760px){.paymentProof{grid-template-columns:repeat(3,1fr)}}
 
   </style>
+
+  <style id="ipoolgo-retheme">
+    :root{
+      --blue:#0a6e72;
+      --dark:#0d2b2e;
+      --soft:#f2fbfa;
+      --muted:#537174;
+      --line:#d6ebe9;
+      --green:#0f9f74;
+      --accent:#18bcc6;
+      --shadow:0 18px 44px rgba(10,87,92,.10);
+    }
+    body{
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--dark);
+      background:linear-gradient(180deg,#f7fbfb 0%,#ffffff 32%,#f8fbfb 100%);
+    }
+    .top{
+      background:linear-gradient(90deg,#0c3439 0%,#0b5056 58%,#0f757c 100%);
+      color:#f8ffff;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .top a{color:#fff;opacity:.95}
+    .topline{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+    .topline .nav{display:flex;gap:14px;align-items:center}
+    header{
+      background:rgba(255,255,255,.88);
+      border-bottom:1px solid rgba(10,110,114,.10);
+      box-shadow:0 10px 30px rgba(8,47,50,.06);
+    }
+    .head{height:74px;gap:14px}
+    .brandLogo{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:172px}
+    .brandLogo img{height:34px;width:auto;object-fit:contain}
+    .brandLogo small{
+      display:block;
+      margin:0;
+      text-transform:uppercase;
+      letter-spacing:1.65px;
+      font-size:9px;
+      color:#5d7f81;
+      font-weight:700;
+    }
+    .search input{
+      background:#f8fcfc;
+      border:1px solid #d9eceb;
+      border-radius:16px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    .search b{color:#5a7b7f}
+    .iconBtn{
+      border:1px solid #d6ebe9;
+      background:linear-gradient(180deg,#ffffff 0%,#f5fbfb 100%);
+      color:#0d4347;
+      box-shadow:0 8px 20px rgba(10,87,92,.08);
+    }
+    .badge{background:linear-gradient(135deg,#0f9ba2,#16c4c5)}
+
+    .hero{
+      padding:24px 0 18px;
+      background:
+        radial-gradient(circle at top right, rgba(24,188,198,.14), transparent 30%),
+        linear-gradient(180deg,#eef9f8 0%,#fbffff 56%,#f5fbfb 100%);
+    }
+    .heroBox{
+      position:relative;
+      min-height:390px;
+      padding:26px 20px;
+      border-radius:32px;
+      border:1px solid #d6ebe9;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.96) 0%, rgba(245,251,250,.98) 52%, rgba(236,248,246,.98) 100%);
+      box-shadow:0 24px 60px rgba(10,87,92,.11);
+      overflow:hidden;
+    }
+    .heroBox:before{
+      content:"";
+      position:absolute;
+      right:-70px; top:-70px;
+      width:220px; height:220px; border-radius:50%;
+      background:radial-gradient(circle, rgba(24,188,198,.18), rgba(24,188,198,0));
+      pointer-events:none;
+    }
+    .hero h1{font-size:clamp(32px,5vw,54px);line-height:.97;letter-spacing:-1.9px;margin:0 0 12px;max-width:620px}
+    .hero h1 span{color:var(--blue)}
+    .hero p{max-width:590px;color:#355659;font-size:16px;line-height:1.55}
+    .btn{
+      border-radius:16px;
+      font-weight:900;
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:linear-gradient(135deg,#0c6d72 0%,#12a0a9 100%);
+      box-shadow:0 16px 28px rgba(14,127,133,.24);
+      color:#fff;
+    }
+    .btn.telegram{
+      background:linear-gradient(135deg,#0d4556 0%,#0f6175 100%);
+      box-shadow:0 16px 28px rgba(8,58,76,.18);
+      color:#fff;
+    }
+    .btn.ghost{
+      background:#fff;
+      border:1px solid #d6ebe9;
+      color:#0d4347;
+      box-shadow:0 10px 24px rgba(8,47,50,.05);
+    }
+    .chips{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .chip{
+      border:1px solid #d7ece9;
+      background:rgba(255,255,255,.88);
+      box-shadow:0 10px 22px rgba(10,87,92,.05);
+      color:#22464a;
+      border-radius:18px;
+    }
+    .quickNav a{
+      background:rgba(255,255,255,.9);
+      border:1px solid #d7ece9;
+      border-radius:18px;
+      color:#10383c;
+      box-shadow:0 10px 22px rgba(8,47,50,.05);
+    }
+    .quickNav a.reviewHot,
+    .bottomNav .navItem.primary,
+    .cat.active,
+    .titleRow a,
+    .titleRow button{color:var(--blue)}
+    .quickNav a.reviewHot{
+      background:linear-gradient(135deg,#0e7074,#16afb7)!important;
+      border-color:#0e7074!important;
+      color:#fff!important;
+    }
+    .tgMarquee{
+      margin-top:14px;
+      border-radius:20px;
+      background:linear-gradient(90deg,#0b353a 0%,#0d545e 55%,#1298a3 100%);
+      box-shadow:0 18px 34px rgba(10,87,92,.18);
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .heroArt{
+      background:linear-gradient(180deg,#e6f8f6 0%,#d6f1ee 100%);
+      border-radius:28px;
+      margin-top:18px;
+      overflow:hidden;
+      border:1px solid #d5ebe8;
+    }
+    .heroReal img{width:100%;height:100%;object-fit:cover}
+    .catOverview{background:transparent}
+    .section{padding:26px 0}
+    .titleRow h2, .guideHero h2, footer h2{letter-spacing:-.9px}
+    .catTile,.card,.trustItem,.paymentProofCard,.faqCard,.videoCard,.guideHero,.guideBlock,.reviewsHint,
+    .delivery,.panel,.detailPanel,.mainPhoto,.reviewCard,.reviewModalBox{
+      border-color:#d6ebe9 !important;
+      box-shadow:var(--shadow);
+    }
+    .catTile,.card,.trustItem,.paymentProofCard,.faqCard,.videoCard,.guideBlock,.reviewCard,.panel,.detailPanel,.mainPhoto{background:#fff}
+    .catTile img,.pic,.mainPhoto,.reviewMedia,.guideImg{background:linear-gradient(180deg,#f6fbfb 0%,#eef8f7 100%)}
+    .catTile em{background:rgba(12,53,58,.82)}
+    .card{border-radius:22px}
+    .pic{height:158px}
+    .tag{background:linear-gradient(135deg,#0f8d73,#13b09b)}
+    .photoCount{background:rgba(12,53,58,.82)}
+    .name{font-size:15px;color:#173d40}
+    .meta{color:#5e7c7f}
+    .price,.detailPrice{color:#11393d}
+    .mini{background:linear-gradient(135deg,#0e6f73,#11a7aa);color:#fff;border-radius:13px;box-shadow:0 10px 18px rgba(14,111,115,.18)}
+    .mini.secondary{background:#eef9f7;color:#0d7175}
+    .mini.telegram{background:#eef6fb;color:#0f586c;border:1px solid #cce4ee}
+    .cats{gap:12px;padding-bottom:8px}
+    .cat{border:1px solid #d7ece9;background:#fff;color:#143b3e;font-weight:800}
+    .cat.active{background:linear-gradient(135deg,#0e7074,#14b4b4);border-color:#0e7074;color:#fff}
+    .delivery{
+      background:linear-gradient(145deg,#0b353a 0%,#0d545e 55%,#0f7078 100%);
+      color:#fff;border-radius:28px;
+    }
+    .delivery p,.contactNote,.contactNote a,footer p{color:#dff7f5}
+    .form input,.form textarea{border:1px solid #cfe7e4;background:#fbfefe}
+    footer{background:linear-gradient(145deg,#0a2f34 0%,#0b464d 100%);color:#fff}
+    footer a{color:#fff}
+    .bottomNav{
+      background:rgba(255,255,255,.92);
+      border-top:1px solid #d6ebe9;
+      box-shadow:0 -12px 28px rgba(9,46,51,.06);
+    }
+    .navItem{border:1px solid #d7ece9;color:#163d41;background:#fff}
+    .navItem.primary{background:linear-gradient(135deg,#0e7074,#14b4b4);color:#fff;border-color:#0e7074}
+    .drawer,.detail{background:rgba(7,31,34,.54)}
+    .panel,.detailPanel,.reviewModalBox{border-radius:28px 28px 0 0}
+    .thumb.active{border:2px solid #0f9ca1}
+    .spec{background:#f4faf9;border:1px solid #dbeeed}
+    .reviewControls button,.reviewModalClose,.close,.qty button{background:#f4fbfb;border:1px solid #d7ece9;color:#0d4347}
+    .reviewCta .wa{background:#149d72}.reviewCta .tg{background:#0f6175}
+    .guideBadge{background:#0f7074}.guideBadge.green{background:#0f9d74}.guideBadge.orange{background:#13b4a1}
+    .reviewsSection{background:linear-gradient(180deg,#f2fbfa 0%,#ffffff 100%);border-top:1px solid #dbeeed;border-bottom:1px solid #dbeeed}
+    .reviewHot,.telegramInline{color:#0d6f72}
+    .sectionLead,.catalogHint,.reviewsHint,.videoLead,.guideList,.faqCard p,.paymentProofCard p{color:#436467}
+    ::selection{background:rgba(24,188,198,.25)}
+
+    @media (min-width:980px){
+      .heroBox{display:grid;grid-template-columns:minmax(0,1fr) 410px;gap:24px;align-items:stretch;padding:34px}
+      .heroBox > h1,.heroBox > p,.heroBox > .ctaRow,.heroBox > .chips,.heroBox > .quickNav,.heroBox > .tgMarquee{grid-column:1}
+      .heroBox > .heroArt{grid-column:2;grid-row:1 / span 6;height:auto;min-height:100%;margin:0;border-radius:30px}
+      .heroBox > .heroArt img{height:100%;object-fit:cover}
+      .chips{grid-template-columns:repeat(4,minmax(0,1fr));max-width:760px}
+    }
+
+    @media (max-width:760px){
+      .topline{justify-content:center;text-align:center}
+      .head{height:auto;min-height:76px;padding:10px 0;flex-wrap:wrap}
+      .brandLogo{min-width:0;flex:1 1 180px}
+      .search{order:3;flex:1 1 100%}
+      .hero{padding-top:16px}
+      .heroBox{padding:22px 16px;border-radius:26px}
+      .hero h1{font-size:30px;max-width:none}
+      .hero p{font-size:15px}
+      .ctaRow{display:grid;grid-template-columns:1fr;gap:10px}
+      .btn{width:100%}
+      .chips{grid-template-columns:1fr 1fr}
+      .quickNav{grid-template-columns:1fr 1fr}
+      .titleRow h2{font-size:22px}
+      .card{border-radius:18px}
+      .pic{height:144px}
+      .bottomNav{grid-template-columns:repeat(5,minmax(0,1fr))}
+      .navItem{font-size:11px;padding:8px 4px}
+    }
+  </style>
+
 </head>
 <body>
-<div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77023261143">WhatsApp: +7 702 326 1143</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
-  <header><div class="wrap head"><a class="logo" href="#top"><span>IPOO</span>LGO<small>БАССЕЙНЫ И АКСЕССУАРЫ</small></a><div class="search"><input id="search" placeholder="Поиск товаров..."><b>⌕</b></div><button class="iconBtn" onclick="openCart()">🛒<span class="badge" id="cartCount">0</span></button></div></header>
+<div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/7757983886">WhatsApp: +7757983886</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
+  <header><div class="wrap head"><a class="logo brandLogo" href="#top" aria-label="IPOOLGO"><img src="assets/logo-ipoolgo-wordmark.png" alt="IPOOLGO"><small>Бассейны и аксессуары</small></a><div class="search"><input id="search" placeholder="Поиск товаров..."><b>⌕</b></div><button class="iconBtn" onclick="openCart()">🛒<span class="badge" id="cartCount">0</span></button></div></header>
   <main id="top">
-    <section class="hero"><div class="wrap"><div class="heroBox"><h1>Бассейны и аксессуары <span>для отдыха дома</span></h1><p>Каркасные бассейны IPOOLGO, фильтры, аксессуары и комплектующие. Быстрая консультация и доставка по Казахстану.</p><div class="ctaRow"><a class="btn primary" href="#catalog">Смотреть каталог</a><a class="btn ghost" href="#reviews" onclick="goToReviews(event)">⭐ Отзывы клиентов</a><a class="btn ghost" href="https://wa.me/77023261143">WhatsApp +7 702 326 1143</a><a class="btn telegram" href="https://t.me/ipolgoo">Telegram @ipolgoo</a></div><div class="chips"><div class="chip">✅ Гарантия</div><div class="chip">🚚 Доставка РК</div><div class="chip">💳 Kaspi / рассрочка</div><div class="chip">🛟 Подбор размера</div></div><div class="quickNav">
+    <section class="hero"><div class="wrap"><div class="heroBox"><h1>Бассейны и аксессуары <span>для отдыха дома</span></h1><p>Каркасные бассейны IPOOLGO, фильтры, аксессуары и комплектующие. Быстрая консультация и доставка по Казахстану.</p><div class="ctaRow"><a class="btn primary" href="#catalog">Смотреть каталог</a><a class="btn ghost" href="#reviews" onclick="goToReviews(event)">⭐ Отзывы клиентов</a><a class="btn ghost" href="https://wa.me/7757983886">WhatsApp: +7757983886</a><a class="btn telegram" href="https://t.me/ipolgoo">Telegram @ipolgoo</a></div><div class="chips"><div class="chip">✅ Гарантия</div><div class="chip">🚚 Доставка РК</div><div class="chip">💳 Kaspi / рассрочка</div><div class="chip">🛟 Подбор размера</div></div><div class="quickNav">
       <a href="#catalog">🛒 Каталог</a>
       <a href="#reviews" class="reviewHot" onclick="goToReviews(event)">⭐ Отзывы</a>
       <a href="#pool-guide">ℹ️ Установка</a>
@@ -214,11 +444,11 @@
     
     <section class="section" id="delivery"><div class="wrap"><div class="delivery"><h2>Доставка и консультация</h2><p>Оставьте заявку, менеджер подберет бассейн по размеру участка, рассчитает доставку и комплектацию.</p><div class="contactNote"><b>Основной канал — WhatsApp.</b> Если WhatsApp не откроется или будет недоступен, клиент может сразу написать в Telegram: <a class="telegramInline" href="https://t.me/ipolgoo">@ipolgoo</a>.</div><div class="form"><input id="leadName" placeholder="Ваше имя"><input id="leadPhone" placeholder="Телефон"><textarea id="leadMsg" placeholder="Какой размер бассейна нужен?"></textarea><button class="btn primary" onclick="sendLead()">Отправить в WhatsApp</button><button class="btn telegram" onclick="sendLeadTelegram()">Написать в Telegram</button></div></div></div></section>
   </main>
-  <footer id="contacts"><div class="wrap"><h2>IPOOLGO Kazakhstan</h2><p>Бассейны, аксессуары, фильтры и комплектующие для воды. WhatsApp: <a href="https://wa.me/77023261143">+7 702 326 1143</a>. Telegram: <a href="https://t.me/ipolgoo">@ipolgoo</a>.</p></div></footer>
+  <footer id="contacts"><div class="wrap"><h2>IPOOLGO Kazakhstan</h2><p>Бассейны, аксессуары, фильтры и комплектующие для воды. WhatsApp: <a href="https://wa.me/7757983886">+7757983886</a>. Telegram: <a href="https://t.me/ipolgoo">@ipolgoo</a>.</p></div></footer>
 <div class="bottomNav">
     <a class="navItem" href="#catalog">Каталог</a>
     <a class="navItem" href="#reviews" onclick="goToReviews(event)">Отзывы</a>
-    <a class="navItem" href="https://wa.me/77023261143">WhatsApp</a>
+    <a class="navItem" href="https://wa.me/7757983886">WhatsApp</a>
     <a class="navItem telegram" href="https://t.me/ipolgoo">Telegram</a>
     <button class="navItem primary" onclick="openCart()">Корзина <span id="cartCount2">0</span></button>
   </div>
@@ -308,7 +538,7 @@
 
   </script>
 <script>
-const WA_PHONE="77023261143";
+const WA_PHONE="7757983886";
 const TG_URL="https://t.me/ipolgoo";
 function waUrl(text){return "https://wa.me/"+WA_PHONE+(text?"?text="+encodeURIComponent(text):"")}
 function openTelegram(text){if(text&&navigator.clipboard){navigator.clipboard.writeText(text).catch(()=>{})} location.href=TG_URL}
@@ -397,7 +627,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Заказывали бассейн во двор. Вживую выглядит даже лучше, чем на фото. Менеджер помог подобрать размер, всё подробно объяснил.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="1" tabindex="0" role="button" aria-label="Открыть отзыв: Вживую выглядит ещё лучше">
@@ -407,7 +637,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Очень понравилось, что перед заказом отправили отзывы других людей . Стало спокойнее выбирать, и в итоге всё подошло.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="2" tabindex="0" role="button" aria-label="Открыть отзыв: Взяли в рассрочку Kaspi">
@@ -417,7 +647,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Взяли через Kaspi в рассрочку. Удобно, что можно было оформить без лишней спешки и спокойно выбрать нужный размер.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="3" tabindex="0" role="button" aria-label="Открыть отзыв: Пришло аккуратно упаковано">
@@ -427,7 +657,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Покупали для дачи. Бассейн пришёл аккуратно упакованный, по внешнему виду всё понравилось.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="4" tabindex="0" role="button" aria-label="Открыть отзыв: Менеджер помог с выбором">
@@ -437,7 +667,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Перед заказом долго выбирали размер, потому что участок небольшой. Менеджер подсказал, какой вариант лучше подойдёт.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="5" tabindex="0" role="button" aria-label="Открыть отзыв: Красиво смотрится на участке">
@@ -447,7 +677,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Брали купель для зоны отдыха. Смотрится очень красиво, материал плотный, вживую всё выглядит качественно.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="6" tabindex="0" role="button" aria-label="Открыть отзыв: Без спешки и лишнего давления">
@@ -457,7 +687,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Понравилось, что менеджер нормально отвечает и не торопит. Сначала всё показали, потом уже оформили заказ.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="7" tabindex="0" role="button" aria-label="Открыть отзыв: Отправили живые фото и видео">
@@ -467,7 +697,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Попросили живые фото и видео и нам отправили отзывы людей. После этого уже было намного легче принять решение и оплатить полную сумму.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="8" tabindex="0" role="button" aria-label="Открыть отзыв: Для семьи отличный вариант">
@@ -477,7 +707,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Заказывали для семьи. Дети довольны, взрослым тоже нравится. Хороший вариант для двора и отдыха летом.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="9" tabindex="0" role="button" aria-label="Открыть отзыв: Всё пришло без проблем">
@@ -487,7 +717,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Брали 3 бассейна и еще аксессуары и комплектующие. Всё пришло в нормальной упаковке, без неприятных сюрпризов.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="10" tabindex="0" role="button" aria-label="Открыть отзыв: Kaspi оформили спокойно">
@@ -497,7 +727,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Оформили бассейн в рассрочку через Kaspi. Всё прошло спокойно, менеджер подсказал по оформлению.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="11" tabindex="0" role="button" aria-label="Открыть отзыв: Отзывы помогли решиться">
@@ -507,7 +737,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Очень помог раздел с отзывами и реальные фото клиентов. Благодаря этому решились на заказ.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="12" tabindex="0" role="button" aria-label="Открыть отзыв: Менеджер был на связи">
@@ -517,7 +747,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Заказали бассейн на участок. Менеджер был на связи и после оформления, подсказал по установке и уходу.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="13" tabindex="0" role="button" aria-label="Открыть отзыв: Материал понравился вживую">
@@ -527,7 +757,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Понравилось, как выглядит материал вживую. На фото одно, а в реальности всё смотрится ещё аккуратнее.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="14" tabindex="0" role="button" aria-label="Открыть отзыв: Подошло для зоны отдыха">
@@ -537,7 +767,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Брали мебель для зоны отдыха. Хорошо подошла по стилю, смотрится современно и аккуратно.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="15" tabindex="0" role="button" aria-label="Открыть отзыв: Всё объяснили понятно">
@@ -547,7 +777,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Купили после консультации с менеджером. Всё объяснили простыми словами, без лишней путаницы.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="16" tabindex="0" role="button" aria-label="Открыть отзыв: Подобрали размер без проблем">
@@ -557,7 +787,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Выбрали размер после того, как менеджер задал пару вопросов по участку. Это реально упростило выбор.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="17" tabindex="0" role="button" aria-label="Открыть отзыв: Вживую выглядит ещё лучше">
@@ -567,7 +797,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Понравилось, что всё прозрачно и без спешки.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="18" tabindex="0" role="button" aria-label="Открыть отзыв: Взяли в рассрочку Kaspi">
@@ -577,7 +807,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Заказывали для базы отдыха. Выглядит достойно, материал крепкий, по внешнему виду всё понравилось.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="19" tabindex="0" role="button" aria-label="Открыть отзыв: Пришло аккуратно упаковано">
@@ -587,7 +817,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Сначала сомневались, но после общения с менеджером стало намного спокойнее. Видно, что помогают, а не просто продают.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="20" tabindex="0" role="button" aria-label="Открыть отзыв: Менеджер помог с выбором">
@@ -597,7 +827,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Бассейн пришёл в хорошей упаковке. Внешний вид соответствует тому, что показывали на фото и видео.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="21" tabindex="0" role="button" aria-label="Открыть отзыв: Красиво смотрится на участке">
@@ -607,7 +837,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Выбрали прямоугольный бассейн. Хорошо подошёл под наш участок, смотрится аккуратно и современно.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="22" tabindex="0" role="button" aria-label="Открыть отзыв: Без спешки и лишнего давления">
@@ -617,7 +847,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Понравилось, что никто не давил с покупкой. Можно спокойно спросить, посмотреть варианты и уже потом решать.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="23" tabindex="0" role="button" aria-label="Открыть отзыв: Отправили живые фото и видео отзывов других  ">
@@ -627,7 +857,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Заказывали для двора. Доставка и оформление прошли нормально, менеджер отвечал по делу и быстро.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="24" tabindex="0" role="button" aria-label="Открыть отзыв: Для семьи отличный вариант">
@@ -637,7 +867,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Брали комплект для отдыха у воды. Всё пришло без проблем, материал понравился.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="25" tabindex="0" role="button" aria-label="Открыть отзыв: Всё пришло без проблем">
@@ -647,7 +877,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Спасибо менеджеру за подбор. Подсказали по размеру, по глубине и по тому, что лучше для семьи.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="26" tabindex="0" role="button" aria-label="Открыть отзыв: Kaspi оформили спокойно">
@@ -657,7 +887,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Перед заказом попросили ещё фото — всё быстро отправили. После этого уже спокойно оформили покупку.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
           <article class="reviewCard" data-review-index="27" tabindex="0" role="button" aria-label="Открыть отзыв: Отзывы помогли решиться">
@@ -667,7 +897,7 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
               <div class="stars">★★★★★</div>
               <p>Заказали после просмотра видеоотзывов. Очень помогло увидеть товар не только на красивых фото, но и в реальности.</p>
               <div class="reviewMeta"><span>Реальный отзыв</span><span>Нажмите, чтобы открыть</span></div>
-              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/77023261143">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
+              <div class="reviewCta" onclick="event.stopPropagation()"><a class="wa" href="https://wa.me/7757983886">WhatsApp</a><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div>
             </div>
           </article>
         </div>
