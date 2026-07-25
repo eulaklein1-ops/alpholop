@@ -350,6 +350,228 @@
     @media(max-width:759px){.waFloat{right:12px;bottom:82px;padding:13px;width:54px;height:54px;justify-content:center}.waFloat b{display:none}.waFloat span{font-size:25px}.bottomNav{grid-template-columns:repeat(5,minmax(0,1fr))}}
   </style>
 
+
+  <style id="strength-proof-section">
+    .strengthProof{
+      padding:20px 0 10px;
+      background:linear-gradient(180deg,#f7fbfb 0%,#ffffff 100%);
+    }
+    .strengthProofBox{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      align-items:center;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .strengthProofVideo{
+      position:relative;
+      overflow:hidden;
+      border-radius:22px;
+      background:#082f33;
+      aspect-ratio:9/16;
+      max-height:580px;
+      width:100%;
+    }
+    .strengthProofVideo video{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      background:#082f33;
+    }
+    .strengthProofBadge{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:#eaf9f6;
+      color:#08785f;
+      font-size:12px;
+      font-weight:950;
+      margin-bottom:10px;
+    }
+    .strengthProofText h2{
+      margin:0 0 10px;
+      font-size:28px;
+      line-height:1.08;
+      letter-spacing:-.8px;
+    }
+    .strengthProofText p{
+      margin:0 0 12px;
+      color:#3e6063;
+      line-height:1.58;
+      font-size:15px;
+    }
+    .strengthPoints{
+      display:grid;
+      gap:9px;
+      margin:14px 0 16px;
+    }
+    .strengthPoint{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:11px 12px;
+      border:1px solid #d9ece9;
+      border-radius:16px;
+      background:#f8fcfb;
+      color:#24494c;
+      font-size:14px;
+      line-height:1.4;
+    }
+    .strengthPoint strong{display:block;color:#123b3e}
+    .strengthNote{
+      padding:11px 12px;
+      border-radius:15px;
+      background:#fff8e8;
+      border:1px solid #f4dfae;
+      color:#684d19;
+      font-size:12px;
+      line-height:1.45;
+      margin-bottom:14px;
+    }
+    .strengthProofText .btn{width:100%}
+    @media(min-width:760px){
+      .strengthProof{padding:30px 0 14px}
+      .strengthProofBox{
+        grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);
+        padding:24px;
+        gap:30px;
+      }
+      .strengthProofVideo{max-height:520px}
+      .strengthProofText h2{font-size:38px}
+      .strengthProofText p{font-size:16px}
+      .strengthProofText .btn{width:auto}
+    }
+  </style>
+
+
+  <style id="faq-video-strength">
+    .faqVideoCard{
+      padding:0!important;
+      overflow:hidden;
+      grid-column:1 / -1;
+    }
+    .faqVideoCard summary{
+      list-style:none;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:17px 16px;
+      user-select:none;
+    }
+    .faqVideoCard summary::-webkit-details-marker{display:none}
+    .faqVideoCard summary b{
+      display:block;
+      margin:0 0 4px;
+      font-size:16px;
+      color:#173d40;
+    }
+    .faqVideoCard summary small{
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.35;
+      font-weight:700;
+    }
+    .faqArrow{
+      width:38px;
+      height:38px;
+      flex:0 0 38px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#eef9f7;
+      color:#0d7175;
+      font-size:25px;
+      font-weight:900;
+      transition:transform .2s ease;
+    }
+    .faqVideoCard[open] .faqArrow{transform:rotate(180deg)}
+    .faqVideoAnswer{
+      border-top:1px solid var(--line);
+      padding:14px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:15px;
+      background:linear-gradient(180deg,#fbfefe 0%,#f4faf9 100%);
+    }
+    .faqVideoAnswer video{
+      width:100%;
+      max-height:560px;
+      aspect-ratio:9/16;
+      object-fit:cover;
+      display:block;
+      border-radius:18px;
+      background:#082f33;
+      box-shadow:0 12px 28px rgba(10,87,92,.13);
+    }
+    .faqVideoText p{
+      margin:0 0 12px;
+      color:#344f52;
+      line-height:1.55;
+      font-size:14px;
+    }
+    .faqVideoPoints{
+      display:grid;
+      gap:8px;
+      margin:12px 0;
+    }
+    .faqVideoPoints span{
+      display:block;
+      padding:10px 11px;
+      border:1px solid #d8ece9;
+      border-radius:13px;
+      background:#fff;
+      color:#24494c;
+      font-size:13px;
+      font-weight:800;
+    }
+    .faqSafetyNote{
+      margin-bottom:0!important;
+      padding:11px 12px;
+      border:1px solid #f1dfb3;
+      border-radius:13px;
+      background:#fff8e8;
+      color:#654d1d!important;
+      font-size:12px!important;
+    }
+    @media(min-width:760px){
+      .faqVideoCard summary{padding:19px 20px}
+      .faqVideoCard summary b{font-size:18px}
+      .faqVideoCard summary small{font-size:13px}
+      .faqVideoAnswer{
+        grid-template-columns:minmax(260px,.65fr) minmax(0,1.35fr);
+        align-items:center;
+        gap:24px;
+        padding:20px;
+      }
+      .faqVideoAnswer video{max-height:480px}
+      .faqVideoText p{font-size:15px}
+      .faqVideoPoints{grid-template-columns:1fr}
+    }
+  </style>
+
+
+  <style id="sand-filter-faq-adjustments">
+    .faqVideoText .btn.whatsapp{
+      width:100%;
+      margin-top:4px;
+      text-align:center;
+    }
+    @media(min-width:760px){
+      .faqVideoText .btn.whatsapp{width:auto;min-width:260px}
+    }
+  </style>
+
 </head>
 <body>
 <div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77754126223">WhatsApp: +77754126223</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
@@ -367,7 +589,7 @@
       <span>⚠️ Если вам долго не отвечают в WhatsApp — напишите в Telegram <b>Открыть Telegram</b></span>
     </div>
   </a><div class="heroArt heroReal"><img src="assets/ipoolgoo_best/round_premium_09.webp" alt="Бассейн IPOOLGO на участке"></div></div></div></section>
-    <section class="section catOverview" id="cat-overview"><div class="wrap">
+<section class="section catOverview" id="cat-overview"><div class="wrap">
       <div class="titleRow"><h2>Разделы каталога</h2><button onclick="resetFilters()">Смотреть всё</button></div>
       <div class="catGrid" id="catGrid"></div>
       <div class="catalogHint"><b>Быстрый подбор:</b> выберите раздел, откройте карточку товара, пролистайте фото и нажмите WhatsApp или Telegram — менеджер подберёт размер, глубину и комплект под ваш участок.</div>
@@ -449,10 +671,65 @@
       <div class="guideBlock">
         <div class="guideText">
           <span class="guideBadge">FAQ</span>
-          <h3>Частые вопросы покупателей</h3>
+          <h3>Полезно знать перед покупкой</h3>
         </div>
         <div class="faqGrid">
-          <div class="faqCard"><b>Как выбрать размер?</b><p>Сначала смотрят, сколько людей будет пользоваться бассейном, где он будет стоять и какая глубина нужна детям и взрослым.</p></div>
+
+          <details class="faqCard faqVideoCard">
+            <summary>
+              <span>
+                <b>Насколько прочные бассейны IPOOLGO?</b>
+                <small>Нажмите, чтобы посмотреть видео и подробный ответ</small>
+              </span>
+              <span class="faqArrow" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="faqVideoAnswer">
+              <video controls playsinline preload="metadata">
+                <source src="assets/video/ipoolgo-medved-prochnost.mp4" type="video/mp4">
+                Ваш браузер не поддерживает просмотр видео.
+              </video>
+              <div class="faqVideoText">
+                <p><strong>Бассейны IPOOLGO имеют плотную многослойную чашу и усиленную конструкцию.</strong> При правильной установке бассейн хорошо сохраняет форму и рассчитан на обычные нагрузки во время семейного отдыха.</p>
+                <div class="faqVideoPoints">
+                  <span>✅ Плотные усиленные стенки</span>
+                  <span>✅ Устойчивая конструкция после наполнения водой</span>
+                  <span>✅ Подходит для активного отдыха взрослых и детей</span>
+                </div>
+                <p class="faqSafetyNote">Видео показывает запас прочности конструкции. Это не инструкция по эксплуатации: не следует намеренно перегружать борт или подпускать к бассейну животных.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faqCard faqVideoCard">
+            <summary>
+              <span>
+                <b>Как работает песочный фильтр и можно ли купить его отдельно?</b>
+                <small>Нажмите, чтобы посмотреть видео и узнать, как очищается вода</small>
+              </span>
+              <span class="faqArrow" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="faqVideoAnswer">
+              <video controls playsinline preload="metadata">
+                <source src="assets/video/ipoolgo-pesochniy-filtr.mp4" type="video/mp4">
+                Ваш браузер не поддерживает просмотр видео.
+              </video>
+              <div class="faqVideoText">
+                <p><strong>Песочный фильтр можно приобрести за дополнительную плату.</strong> Мы подбираем модель по объёму бассейна, чтобы вода проходила полный цикл очистки с подходящей производительностью.</p>
+                <p>Насос забирает воду из бассейна и направляет её в ёмкость с фильтрующим наполнителем. Проходя через песок, вода очищается от мелкого мусора, пыли и других механических загрязнений, после чего возвращается обратно в бассейн.</p>
+                <div class="faqVideoPoints">
+                  <span>✅ Помогает дольше сохранять воду прозрачной</span>
+                  <span>✅ Задерживает мелкий мусор и загрязнения</span>
+                  <span>✅ Обслуживается с помощью обратной промывки</span>
+                  <span>✅ Подбирается по объёму конкретного бассейна</span>
+                </div>
+                <p class="faqSafetyNote"><strong>Важно:</strong> песочный фильтр очищает воду от механических загрязнений, но не заменяет правильный уход и средства для обеззараживания воды.</p>
+                <a class="btn whatsapp" href="https://wa.me/77754126223" data-wa-text="Здравствуйте! Хочу подобрать песочный фильтр для бассейна IPOOLGO. Подскажите подходящую модель и стоимость.">💬 Подобрать песочный фильтр</a>
+              </div>
+            </div>
+          </details>
+
+
+<div class="faqCard"><b>Как выбрать размер?</b><p>Сначала смотрят, сколько людей будет пользоваться бассейном, где он будет стоять и какая глубина нужна детям и взрослым.</p></div>
           <div class="faqCard"><b>Можно ставить на траву?</b><p>Да, но лучше использовать подстилку или геотекстиль, чтобы сгладить неровности и защитить дно от проколов.</p></div>
           <div class="faqCard"><b>Сложно ли установить?</b><p>Специальные мастера не нужны. Обычно установка занимает около 20–30 минут, если площадка уже подготовлена.</p></div>
           <div class="faqCard"><b>Нужен ли фильтр?</b><p>Для средних и больших бассейнов фильтр сильно упрощает уход за водой. Менеджер подберёт мощность под объём.</p></div>
