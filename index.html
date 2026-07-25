@@ -933,6 +933,87 @@
   }
 </style>
 
+
+<style id="jacuzzi-product-styles">
+
+  .productCardVideoWrap{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+  }
+  .productSoundBtn{
+    position:absolute;
+    left:50%;
+    bottom:14px;
+    z-index:4;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:max-content;
+    max-width:calc(100% - 24px);
+    min-height:42px;
+    padding:10px 15px;
+    border:1px solid rgba(255,255,255,.82);
+    border-radius:999px;
+    background:rgba(7,67,62,.88);
+    color:#fff!important;
+    font-size:13px;
+    line-height:1;
+    font-weight:900;
+    white-space:nowrap;
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+  }
+  .productSoundBtn.soundOn{
+    background:rgba(15,139,122,.95);
+  }
+  .productSoundBtn:active{
+    transform:translateX(-50%) scale(.97);
+  }
+
+  .productCardVideo{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    background:#07383d;
+  }
+  .detailProductVideo{
+    position:relative;
+    overflow:hidden;
+    margin-bottom:12px;
+    border-radius:18px;
+    background:#07383d;
+    aspect-ratio:9/16;
+    max-height:560px;
+  }
+  .detailProductVideo video{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+  }
+  .detailProductVideo span{
+    position:absolute;
+    left:10px;
+    top:10px;
+    padding:6px 10px;
+    border-radius:999px;
+    background:rgba(8,65,59,.78);
+    color:#fff!important;
+    font-size:12px;
+    font-weight:900;
+    backdrop-filter:blur(7px);
+  }
+  @media(min-width:760px){
+    .detailProductVideo{max-height:520px}
+  }
+</style>
+
 </head>
 <body>
 <div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77754126223">WhatsApp: +77754126223</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
@@ -1453,6 +1534,35 @@
   <div class="detail" id="detail" onclick="if(event.target.id==='detail')closeProduct()"><div class="detailPanel"><div class="panelHead"><h2>Карточка товара</h2><button class="close" onclick="closeProduct()">✕</button></div><div id="productDetail"></div></div></div>
   <div class="photoViewer" id="photoViewer" onclick="if(event.target.id==='photoViewer')closePhotoViewer()"><button class="viewerClose" onclick="closePhotoViewer()">✕</button><button class="viewerArrow left" onclick="changePhoto(-1,event)">‹</button><img class="viewerImg" id="viewerImg" alt="Фото товара"><button class="viewerArrow right" onclick="changePhoto(1,event)">›</button><div class="viewerCounter" id="viewerCounter">1 / 1</div></div>
 <script src="products.js"></script>
+
+<script id="jacuzzi-product-data">
+(function(){
+  if(!Array.isArray(window.PRODUCTS)) return;
+  if(window.PRODUCTS.some(function(p){return p.article==="JACUZZI-ROUND-01"})) return;
+  window.PRODUCTS.push({
+    article:"JACUZZI-ROUND-01",
+    title:"Круглое джакузи IPOOLGO с подогревом",
+    category:"Купели и джакузи",
+    badge:"Новинка",
+    price:0,
+    image:"assets/video/ipoolgo-jacuzzi-round-poster.jpg",
+    gallery:["assets/video/ipoolgo-jacuzzi-round-poster.jpg"],
+    video:"assets/video/ipoolgo-jacuzzi-round.mp4",
+    size:"Размер уточняется",
+    form:"Круглая",
+    material:"Плотный многослойный материал",
+    desc:"Круглое джакузи IPOOLGO с пузырьковым массажем и системой подогрева воды. Необходимое оборудование для работы входит в комплект. Подходит для отдыха дома, на террасе или во дворе.",
+    features:[
+      "Пузырьковый массаж",
+      "Подогрев воды",
+      "Оборудование входит в комплект",
+      "Удобная круглая форма",
+      "Быстрая консультация и подбор комплектации"
+    ]
+  });
+})();
+</script>
+
   <script>
     const reviewItems = [{"type": "video", "src": "assets/video/IMG_5194.MP4", "poster": "", "title": "Просторный и крепкий бассейн", "desc": "Установили бассейн вечером и уже на следующий день пользовались. Чаша хорошо держит форму, борта плотные, а места достаточно для отдыха всей семьи.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/video/5984743174_366007_out_366007(1).mp4", "poster": "", "title": "Дети довольны бассейном", "desc": "Бассейн установили во дворе и наполнили водой — дети сразу оценили. Вживую выглядит ярко, хорошо держит форму и отлично подошёл для семейного отдыха.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_01.mp4", "poster": "assets/reviews/review_video_01_poster.webp", "title": "Подобрали размер без проблем", "desc": "Заказывали бассейн во двор. Вживую выглядит даже лучше, чем на фото. Менеджер помог подобрать размер, всё подробно объяснил.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_02.mp4", "poster": "assets/reviews/review_video_02_poster.webp", "title": "Вживую выглядит ещё лучше", "desc": "Очень понравилось, что перед заказом отправили отзывы других людей . Стало спокойнее выбирать, и в итоге всё подошло.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_03.mp4", "poster": "assets/reviews/review_video_03_poster.webp", "title": "Взяли в рассрочку Kaspi", "desc": "Взяли через Kaspi в рассрочку. Удобно, что можно было оформить без лишней спешки и спокойно выбрать нужный размер.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_04.mp4", "poster": "assets/reviews/review_video_04_poster.webp", "title": "Пришло аккуратно упаковано", "desc": "Покупали для дачи. Бассейн пришёл аккуратно упакованный, по внешнему виду всё понравилось.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_05.mp4", "poster": "assets/reviews/review_video_05_poster.webp", "title": "Менеджер помог с выбором", "desc": "Перед заказом долго выбирали размер, потому что участок небольшой. Менеджер подсказал, какой вариант лучше подойдёт.", "tag": "Видеоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_01.webp", "poster": "assets/reviews/review_photo_01.webp", "title": "Красиво смотрится на участке", "desc": "Брали купель для зоны отдыха. Смотрится очень красиво, материал плотный, вживую всё выглядит качественно.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_02.webp", "poster": "assets/reviews/review_photo_02.webp", "title": "Без спешки и лишнего давления", "desc": "Понравилось, что менеджер нормально отвечает и не торопит. Сначала всё показали, потом уже оформили заказ.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_03.webp", "poster": "assets/reviews/review_photo_03.webp", "title": "Отправили живые фото и видео других отзывов", "desc": "Попросили живые фото и видео — нам всё отправили. После этого уже было намного легче принять решение.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_04.webp", "poster": "assets/reviews/review_photo_04.webp", "title": "Для семьи отличный вариант", "desc": "Заказывали для семьи. Дети довольны, взрослым тоже нравится. Хороший вариант для двора и отдыха летом.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_05.webp", "poster": "assets/reviews/review_photo_05.webp", "title": "Всё пришло без проблем", "desc": "Брали 3 бассейна и еще аксессуары и комплектующие. Всё пришло в нормальной упаковке, без неприятных сюрпризов.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_06.webp", "poster": "assets/reviews/review_photo_06.webp", "title": "Kaspi оформили спокойно", "desc": "Оформили бассейн в рассрочку через Kaspi. Всё прошло спокойно, менеджер подсказал по оформлению.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_07.webp", "poster": "assets/reviews/review_photo_07.webp", "title": "Отзывы помогли решиться", "desc": "Очень помог раздел с отзывами и реальные фото клиентов. Благодаря этому решились на заказ.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_08.webp", "poster": "assets/reviews/review_photo_08.webp", "title": "Менеджер был на связи", "desc": "Заказали бассейн на участок. Менеджер был на связи и после оформления, подсказал по установке и уходу.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_09.webp", "poster": "assets/reviews/review_photo_09.webp", "title": "Материал понравился вживую", "desc": "Понравилось, как выглядит материал вживую. На фото одно, а в реальности всё смотрится ещё аккуратнее.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_10.webp", "poster": "assets/reviews/review_photo_10.webp", "title": "Подошло для зоны отдыха", "desc": "Брали мебель для зоны отдыха. Хорошо подошла по стилю, смотрится современно и аккуратно.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_11.webp", "poster": "assets/reviews/review_photo_11.webp", "title": "Всё объяснили понятно", "desc": "Купили после консультации с менеджером. Всё объяснили простыми словами, без лишней путаницы.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_12.webp", "poster": "assets/reviews/review_photo_12.webp", "title": "Подобрали размер без проблем", "desc": "Выбрали размер после того, как менеджер задал пару вопросов по участку. Это реально упростило выбор.", "tag": "Фотоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_06.mp4", "poster": "assets/reviews/review_video_06_poster.webp", "title": "Вживую выглядит ещё лучше", "desc": "Перед оформлением отправили отзывы и фото заказов. Понравилось, что всё прозрачно и без спешки.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_07.mp4", "poster": "assets/reviews/review_video_07_poster.webp", "title": "Взяли в рассрочку Kaspi", "desc": "Заказывали для дома. Выглядит достойно, материал крепкий, по внешнему виду всё понравилось.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_08.mp4", "poster": "assets/reviews/review_video_08_poster.webp", "title": "Пришло аккуратно упаковано", "desc": "Сначала сомневались, но после общения с менеджером стало намного спокойнее. Видно, что помогают, а не просто продают.", "tag": "Видеоотзыв"}, {"type": "video", "src": "assets/reviews/review_video_09.mp4", "poster": "assets/reviews/review_video_09_poster.webp", "title": "Менеджер помог с выбором", "desc": "Бассейн пришёл в хорошей упаковке. Внешний вид соответствует тому, что показывали на фото и видео.", "tag": "Видеоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_13.webp", "poster": "assets/reviews/review_photo_13.webp", "title": "Красиво смотрится на участке", "desc": "Выбрали прямоугольный бассейн. Хорошо подошёл под наш участок, смотрится аккуратно и современно.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_14.webp", "poster": "assets/reviews/review_photo_14.webp", "title": "Без спешки и лишнего давления", "desc": "Понравилось, что никто не давил с покупкой. Можно спокойно спросить, посмотреть варианты и уже потом решать.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_15.webp", "poster": "assets/reviews/review_photo_15.webp", "title": "Отправили живые фото и видео других отзывов", "desc": "Заказывали для двора. Доставка и оформление прошли нормально, менеджер отвечал по делу и быстро.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_16.webp", "poster": "assets/reviews/review_photo_16.webp", "title": "Для семьи отличный вариант", "desc": "Брали комплект для отдыха у воды. Всё пришло без проблем, материал понравился.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_17.webp", "poster": "assets/reviews/review_photo_17.webp", "title": "Всё пришло без проблем", "desc": "Спасибо менеджеру за подбор. Подсказали по размеру, по глубине и по тому, что лучше для семьи.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_18.webp", "poster": "assets/reviews/review_photo_18.webp", "title": "Kaspi оформили спокойно", "desc": "Перед заказом попросили ещё фото — всё быстро отправили. После этого уже спокойно оформили покупку.", "tag": "Фотоотзыв"}, {"type": "image", "src": "assets/reviews/review_photo_19.webp", "poster": "assets/reviews/review_photo_19.webp", "title": "Отзывы помогли решиться", "desc": "Заказали после просмотра видеоотзывов. Очень помогло увидеть товар не только на красивых фото, но и в реальности.", "tag": "Фотоотзыв"}];
     let activeReview = 0;
@@ -1555,7 +1665,7 @@ function campaignNote(){
   if(CAMPAIGN.utm_content)parts.push("объявление: "+CAMPAIGN.utm_content);
   return parts.length?"\n\nИсточник заявки — "+parts.join("; "):"";
 }
-function waUrl(text){const message=(text||"Здравствуйте! Хочу подобрать бассейн IPOOLGO. Подскажите актуальные размеры и цены.")+campaignNote();return "https://wa.me/"+WA_PHONE+"?text="+encodeURIComponent(message)}
+function waUrl(text){const message=(text||"Здравствуйте! Хочу подобрать бассейн IPOOLGO. Подскажите актуальные размеры и цены.");return "https://wa.me/"+WA_PHONE+"?text="+encodeURIComponent(message)}
 function tikTokTrack(eventName,params){try{if(window.ttq&&typeof window.ttq.track==="function")window.ttq.track(eventName,params||{})}catch(e){console.warn("TikTok event error",eventName,e)}}
 function openWhatsAppTracked(text,context){
   tikTokTrack("Contact");
@@ -1576,7 +1686,44 @@ function updateCount(){let c=cart.reduce((s,i)=>s+i.qty,0);cartCount.textContent
 function drawCats(){document.getElementById('cats').innerHTML=catList.map(c=>`<button class="cat ${c===current?'active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}
 function setCat(c){current=c;drawCats();drawCatGrid();drawProducts();document.getElementById('catalog').scrollIntoView({behavior:'smooth',block:'start'})}
 function drawCatGrid(){const box=document.getElementById('catGrid');if(!box)return;const cats=catList.filter(c=>c!=='Все');box.innerHTML=cats.map(c=>{const items=PRODUCTS.filter(p=>p.category===c);const img=(items.find(p=>p.image)||{}).image||'';return `<button class="catTile" onclick="setCat('${c}')">${img?`<img src="${img}" alt="${c}" loading="lazy">`:''}<em>${items.length} товар.</em><div class="catTileBody"><b>${c}</b><span>Открыть раздел и посмотреть карточки</span></div></button>`}).join('')}
-function drawProducts(){const q=document.getElementById('search').value.toLowerCase().trim();let list=PRODUCTS.filter(p=>(current==='Все'||p.category===current)&&(!q||p.title.toLowerCase().includes(q)||p.article.toLowerCase().includes(q)||(p.size||'').toLowerCase().includes(q)||(p.category||'').toLowerCase().includes(q)));document.getElementById('grid').innerHTML=list.map((p,i)=>`<article class="card"><div class="pic" onclick="openProduct('${p.article}')"><span class="tag">${p.badge||((i%5===0)?'Хит':'В наличии')}</span><span class="photoCount">📷 ${(p.gallery||[]).length}</span>${p.image?`<img src="${p.image}" alt="${p.title}" loading="lazy">`:'<div class="fakePic"></div>'}</div><div class="info"><div class="name" onclick="openProduct('${p.article}')">${p.title}</div><div class="meta">${p.size?`Размер: ${p.size}`:`Артикул: ${p.article}`}</div>${p.depth?`<div class="meta">${p.depth.includes('на выбор')?'Глубина: '+p.depth.replace('на выбор: ',''):'Глубина: '+p.depth}</div>`:''}<div>${p.old_price?`<div class="old">${fmt(p.old_price)}</div>`:''}<div class="price${priceClass(p)}">${fmt(p.price)}</div></div><div class="cardActions"><button class="mini secondary" onclick="openProduct('${p.article}')">Подробнее</button><button class="mini whatsapp" onclick="quick('${p.article}')">WhatsApp</button><button class="mini" onclick="add('${p.article}')">${Number(p.price)>0?'В корзину':'Заявка'}</button></div><button class="mini secondary infoLink" onclick="goGuide(event)">Установка и видео</button></div></article>`).join('')||'<div class="empty">Товары не найдены</div>'}
+
+function toggleProductSound(button,event){
+  if(event){
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const wrap=button.closest('.productCardVideoWrap');
+  const video=wrap&&wrap.querySelector('video');
+  if(!video)return;
+
+  document.querySelectorAll('.productCardVideo').forEach(function(other){
+    if(other!==video){
+      other.muted=true;
+      const otherBtn=other.closest('.productCardVideoWrap')?.querySelector('.productSoundBtn');
+      if(otherBtn){
+        otherBtn.textContent='🔊 Включить звук';
+        otherBtn.classList.remove('soundOn');
+      }
+    }
+  });
+
+  if(video.muted){
+    video.muted=false;
+    video.volume=1;
+    const playPromise=video.play();
+    if(playPromise&&typeof playPromise.catch==='function'){
+      playPromise.catch(function(){});
+    }
+    button.textContent='🔇 Выключить звук';
+    button.classList.add('soundOn');
+  }else{
+    video.muted=true;
+    button.textContent='🔊 Включить звук';
+    button.classList.remove('soundOn');
+  }
+}
+
+function drawProducts(){const q=document.getElementById('search').value.toLowerCase().trim();let list=PRODUCTS.filter(p=>(current==='Все'||p.category===current)&&(!q||p.title.toLowerCase().includes(q)||p.article.toLowerCase().includes(q)||(p.size||'').toLowerCase().includes(q)||(p.category||'').toLowerCase().includes(q)));document.getElementById('grid').innerHTML=list.map((p,i)=>`<article class="card"><div class="pic" onclick="openProduct('${p.article}')"><span class="tag">${p.badge||((i%5===0)?'Хит':'В наличии')}</span><span class="photoCount">📷 ${(p.gallery||[]).length}</span>${p.video?`<div class="productCardVideoWrap"><video class="productCardVideo" src="${p.video}" poster="${p.image||''}" autoplay muted loop playsinline preload="metadata"></video><button type="button" class="productSoundBtn" onclick="toggleProductSound(this,event)">🔊 Включить звук</button></div>`:(p.image?`<img src="${p.image}" alt="${p.title}" loading="lazy">`:'<div class="fakePic"></div>')}</div><div class="info"><div class="name" onclick="openProduct('${p.article}')">${p.title}</div><div class="meta">${p.size?`Размер: ${p.size}`:`Артикул: ${p.article}`}</div>${p.depth?`<div class="meta">${p.depth.includes('на выбор')?'Глубина: '+p.depth.replace('на выбор: ',''):'Глубина: '+p.depth}</div>`:''}<div>${p.old_price?`<div class="old">${fmt(p.old_price)}</div>`:''}<div class="price${priceClass(p)}">${fmt(p.price)}</div></div><div class="cardActions"><button class="mini secondary" onclick="openProduct('${p.article}')">Подробнее</button><button class="mini whatsapp" onclick="quick('${p.article}')">WhatsApp</button><button class="mini" onclick="add('${p.article}')">${Number(p.price)>0?'В корзину':'Заявка'}</button></div><button class="mini secondary infoLink" onclick="goGuide(event)">Установка и видео</button></div></article>`).join('')||'<div class="empty">Товары не найдены</div>'}
 function add(article){const p=PRODUCTS.find(x=>x.article===article);const ex=cart.find(x=>x.article===article); if(ex)ex.qty++;else cart.push({...p,qty:1});tikTokTrack('AddToCart',{content_type:'product',content_ids:[p.article],description:p.title,quantity:1,currency:'KZT',value:Number(p.price)||0}); save(); openCart();}
 function change(article,d){const it=cart.find(x=>x.article===article); if(!it)return; it.qty+=d; if(it.qty<=0)cart=cart.filter(x=>x.article!==article); save(); drawCart();}
 function openCart(){drawer.classList.add('open');drawCart()} function closeCart(){drawer.classList.remove('open')}
@@ -1611,7 +1758,7 @@ function renderSpecs(p){
 
 function openPhotoViewer(e){if(e&&e.stopPropagation)e.stopPropagation();const g=productGallery();if(!g.length)return;photoViewer.classList.add('open');paintProductGallery();}
 function closePhotoViewer(){if(typeof photoViewer!=='undefined')photoViewer.classList.remove('open')}
-function renderProduct(){const p=activeProduct;if(!p)return;const gallery=productGallery();const main=gallery[activePhoto]||p.image||'';const isPool=/бассейн/i.test(p.title);const installNote=isPool?'Ниже на сайте есть отдельный раздел: технология Drop Stitch, подготовка площадки, уход за водой и ссылки на видеообзоры.':'Для аксессуаров менеджер подскажет совместимость с вашим бассейном, а общий раздел ниже поможет понять монтаж и обслуживание.';const buyText=Number(p.price)>0?'В корзину':'Отправить заявку';productDetail.innerHTML=`<div class="detailGrid"><div class="galleryBox"><div class="galleryTop"><strong id="photoCounter">${gallery.length?activePhoto+1:0} / ${gallery.length||0}</strong><span class="swipeHelp">Листайте фото свайпом ← →</span></div><div class="photoStage" ontouchstart="photoTouchStart(event)" ontouchend="photoTouchEnd(event)"><button class="photoArrow left" onclick="changePhoto(-1,event)">‹</button><div class="mainPhoto" onclick="openPhotoViewer(event)">${main?`<img id="mainProductImg" src="${main}" alt="${p.title}">`:'<div class="fakePic"></div>'}<span class="zoomHint">Нажмите, чтобы открыть крупно</span></div><button class="photoArrow right" onclick="changePhoto(1,event)">›</button></div><div class="thumbs" id="productThumbs">${gallery.map((src,i)=>`<button class="thumb ${i===activePhoto?'active':''}" onclick="selectPhoto(${i},event)"><img src="${src}" alt="Фото ${i+1}"></button>`).join('')}</div><button class="btn ghost openPhotoBtn" onclick="openPhotoViewer(event)">Открыть фото на весь экран</button></div><div><h1 class="detailTitle">${p.title}</h1><div class="meta">Артикул: ${p.article} · ${p.category}</div>${p.badge?`<div class="statusPill">${p.badge}</div>`:''}<div style="margin:12px 0">${p.old_price?`<div class="old">${fmt(p.old_price)}</div>`:''}<div class="detailPrice${priceClass(p)}">${fmt(p.price)}</div></div>${Number(p.price)>0?'':`<div class="quickHelp"><b>Цена уточняется менеджером.</b><br>Нажмите WhatsApp или Telegram, отправьте размер/город — менеджер быстро назовёт актуальную цену и комплектацию под Казахстан.</div>`}<div class="specs">${renderSpecs(p)}</div><p>${p.desc||''}</p><ul class="bullets">${(p.features||[]).map(x=>`<li>${x}</li>`).join('')}</ul><div class="guideBox"><b>Подробно про установку и обслуживание</b><p>${installNote}</p><button class="btn ghost" onclick="goGuide(event)">Открыть установку, технологию и видео</button></div><div class="stickyBuy"><button class="btn whatsapp" onclick="quick('${p.article}')">Написать в WhatsApp</button><button class="btn ghost" onclick="add('${p.article}')">${buyText}</button><button class="btn telegram" onclick="quickTelegram('${p.article}')">Telegram</button></div></div></div>`;paintProductGallery();}
+function renderProduct(){const p=activeProduct;if(!p)return;const gallery=productGallery();const productVideo=p.video?`<div class="detailProductVideo"><video controls playsinline preload="metadata" poster="${p.image||''}"><source src="${p.video}" type="video/mp4"></video><span>Видео товара</span></div>`:'';const main=gallery[activePhoto]||p.image||'';const isPool=/бассейн/i.test(p.title);const isJacuzzi=/джакузи|купел/i.test(p.title);const installNote=isJacuzzi?'Менеджер расскажет о подключении системы подогрева и пузырькового массажа, а также уточнит комплектацию и условия доставки.':(isPool?'Ниже на сайте есть отдельный раздел: технология Drop Stitch, подготовка площадки, уход за водой и ссылки на видеообзоры.':'Для аксессуаров менеджер подскажет совместимость с вашим бассейном, а общий раздел ниже поможет понять монтаж и обслуживание.');const buyText=Number(p.price)>0?'В корзину':'Отправить заявку';productDetail.innerHTML=`<div class="detailGrid"><div class="galleryBox">${productVideo}<div class="galleryTop"><strong id="photoCounter">${gallery.length?activePhoto+1:0} / ${gallery.length||0}</strong><span class="swipeHelp">Листайте фото свайпом ← →</span></div><div class="photoStage" ontouchstart="photoTouchStart(event)" ontouchend="photoTouchEnd(event)"><button class="photoArrow left" onclick="changePhoto(-1,event)">‹</button><div class="mainPhoto" onclick="openPhotoViewer(event)">${main?`<img id="mainProductImg" src="${main}" alt="${p.title}">`:'<div class="fakePic"></div>'}<span class="zoomHint">Нажмите, чтобы открыть крупно</span></div><button class="photoArrow right" onclick="changePhoto(1,event)">›</button></div><div class="thumbs" id="productThumbs">${gallery.map((src,i)=>`<button class="thumb ${i===activePhoto?'active':''}" onclick="selectPhoto(${i},event)"><img src="${src}" alt="Фото ${i+1}"></button>`).join('')}</div><button class="btn ghost openPhotoBtn" onclick="openPhotoViewer(event)">Открыть фото на весь экран</button></div><div><h1 class="detailTitle">${p.title}</h1><div class="meta">Артикул: ${p.article} · ${p.category}</div>${p.badge?`<div class="statusPill">${p.badge}</div>`:''}<div style="margin:12px 0">${p.old_price?`<div class="old">${fmt(p.old_price)}</div>`:''}<div class="detailPrice${priceClass(p)}">${fmt(p.price)}</div></div>${Number(p.price)>0?'':`<div class="quickHelp"><b>Цена уточняется менеджером.</b><br>Нажмите WhatsApp или Telegram, отправьте размер/город — менеджер быстро назовёт актуальную цену и комплектацию под Казахстан.</div>`}<div class="specs">${renderSpecs(p)}</div><p>${p.desc||''}</p><ul class="bullets">${(p.features||[]).map(x=>`<li>${x}</li>`).join('')}</ul><div class="guideBox"><b>Подробно про установку и обслуживание</b><p>${installNote}</p><button class="btn ghost" onclick="goGuide(event)">Открыть установку, технологию и видео</button></div><div class="stickyBuy"><button class="btn whatsapp" onclick="quick('${p.article}')">Написать в WhatsApp</button><button class="btn ghost" onclick="add('${p.article}')">${buyText}</button><button class="btn telegram" onclick="quickTelegram('${p.article}')">Telegram</button></div></div></div>`;paintProductGallery();}
 function goGuide(e){if(e&&e.stopPropagation)e.stopPropagation();closeProduct();closeCart();setTimeout(()=>{const el=document.getElementById('pool-guide');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#pool-guide')},80)}
 function leadText(){return `Здравствуйте! Заявка с сайта.\nИмя: ${leadName.value}\nТелефон: ${leadPhone.value}\nСообщение: ${leadMsg.value}`}
 function sendLead(){tikTokTrack('SubmitForm');openWhatsAppTracked(leadText(),{placement:'lead_form'});}
