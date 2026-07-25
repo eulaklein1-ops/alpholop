@@ -572,6 +572,85 @@
     }
   </style>
 
+
+<style id="start-video-banner-styles">
+  .startVideoBanner{
+    position:relative;
+    width:100%;
+    margin-top:16px;
+    overflow:hidden;
+    border-radius:24px;
+    background:#07383d;
+    aspect-ratio:16/7;
+    box-shadow:0 16px 38px rgba(10,63,68,.15);
+  }
+  .startVideo{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center 44%;
+    background:#07383d;
+  }
+  .startVideoShade{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(1,25,29,.54) 100%);
+  }
+  .startVideoCaption{
+    position:absolute;
+    left:16px;
+    right:16px;
+    bottom:14px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:12px;
+    color:#fff;
+    pointer-events:none;
+    text-shadow:0 2px 10px rgba(0,0,0,.35);
+  }
+  .startVideoCaption strong{
+    font-size:22px;
+    line-height:1;
+    letter-spacing:.5px;
+  }
+  .startVideoCaption span{
+    font-size:13px;
+    font-weight:800;
+    text-align:right;
+  }
+  @media(max-width:759px){
+    .startVideoBanner{
+      margin-top:12px;
+      border-radius:20px;
+      aspect-ratio:4/3;
+      max-height:390px;
+    }
+    .startVideo{
+      object-position:center center;
+    }
+    .startVideoCaption{
+      left:13px;
+      right:13px;
+      bottom:12px;
+    }
+    .startVideoCaption strong{font-size:20px}
+    .startVideoCaption span{
+      max-width:180px;
+      font-size:12px;
+      line-height:1.25;
+    }
+  }
+  @media(max-width:420px){
+    .startVideoBanner{
+      aspect-ratio:1/1;
+      max-height:360px;
+    }
+  }
+</style>
+
 </head>
 <body>
 <div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77754126223">WhatsApp: +77754126223</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
@@ -588,7 +667,24 @@
       <span>⚠️ Если вам долго не отвечают в WhatsApp — напишите в Telegram <b>Открыть Telegram</b></span>
       <span>⚠️ Если вам долго не отвечают в WhatsApp — напишите в Telegram <b>Открыть Telegram</b></span>
     </div>
-  </a><div class="heroArt heroReal"><img src="assets/ipoolgoo_best/round_premium_09.webp" alt="Бассейн IPOOLGO на участке"></div></div></div></section>
+  </a>
+<div class="startVideoBanner" aria-label="Видео IPOOLGO">
+  <video class="startVideo"
+         autoplay
+         muted
+         loop
+         playsinline
+         preload="metadata"
+         poster="assets/video/ipoolgo-hero-poster.jpg">
+    <source src="assets/video/ipoolgo-hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="startVideoShade"></div>
+  <div class="startVideoCaption">
+    <strong>IPOOLGO</strong>
+    <span>Бассейны для отдыха всей семьи</span>
+  </div>
+</div>
+</div></div></section>
 <section class="section catOverview" id="cat-overview"><div class="wrap">
       <div class="titleRow"><h2>Разделы каталога</h2><button onclick="resetFilters()">Смотреть всё</button></div>
       <div class="catGrid" id="catGrid"></div>
@@ -1259,6 +1355,27 @@ if(location.hash){const art=decodeURIComponent(location.hash.slice(1)); if(PRODU
       <div class="reviewModalFoot"><div id="reviewModalText"></div><div class="reviewModalBtns"><button type="button" onclick="reviewStep(-1)">‹ Назад</button><button type="button" onclick="reviewStep(1)">Дальше ›</button><a class="tg" href="https://t.me/ipolgoo">Telegram</a></div></div>
     </div>
   </div>
+
+
+<script id="start-video-autoplay">
+document.addEventListener("DOMContentLoaded", function(){
+  const video = document.querySelector(".startVideo");
+  if(!video) return;
+
+  video.muted = true;
+  const playVideo = () => video.play().catch(() => {});
+
+  playVideo();
+
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden){
+      video.pause();
+    }else{
+      playVideo();
+    }
+  });
+});
+</script>
 
 </body>
 </html>
