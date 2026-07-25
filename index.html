@@ -1014,6 +1014,80 @@
   }
 </style>
 
+
+<style id="bottom-nav-text-fix">
+/* Исправление нижнего мобильного меню: контрастный текст на всех кнопках */
+@media (max-width:759px){
+  .bottomNav{
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:6px!important;
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom))!important;
+  }
+
+  .bottomNav .navItem{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:3px!important;
+    min-width:0!important;
+    min-height:44px!important;
+    padding:8px 3px!important;
+    border:1px solid #cfe5e2!important;
+    border-radius:15px!important;
+    background:#ffffff!important;
+    color:#0b6259!important;
+    opacity:1!important;
+    visibility:visible!important;
+    font-size:10.5px!important;
+    line-height:1.05!important;
+    font-weight:900!important;
+    letter-spacing:0!important;
+    text-align:center!important;
+    text-decoration:none!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:clip!important;
+    -webkit-text-fill-color:#0b6259!important;
+  }
+
+  .bottomNav .navItem.whatsappPrimary{
+    background:linear-gradient(135deg,#0ba360,#25d366)!important;
+    color:#ffffff!important;
+    border-color:#18b873!important;
+    -webkit-text-fill-color:#ffffff!important;
+  }
+
+  .bottomNav .navItem.telegram{
+    background:linear-gradient(135deg,#1689a8,#27a7e7)!important;
+    color:#ffffff!important;
+    border-color:#1c98c7!important;
+    -webkit-text-fill-color:#ffffff!important;
+  }
+
+  .bottomNav .navItem:active{
+    transform:scale(.97);
+  }
+
+  .bottomNav #cartCount2{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:17px!important;
+    min-width:17px!important;
+    height:17px!important;
+    margin-left:2px!important;
+    padding:0!important;
+    border-radius:50%!important;
+    background:#e14d4d!important;
+    color:#ffffff!important;
+    -webkit-text-fill-color:#ffffff!important;
+    font-size:10px!important;
+    line-height:17px!important;
+    font-weight:900!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="top"><div class="wrap topline"><span>📍 Казахстан, доставка по всем городам</span><span><a href="https://wa.me/77754126223">WhatsApp: +77754126223</a> · <a href="https://t.me/ipolgoo">Telegram: @ipolgoo</a></span><span class="desktop nav"><a href="#pool-guide">О бассейнах</a><a href="#reviews" onclick="goToReviews(event)">Отзывы</a><a href="#delivery">Доставка</a><a href="#guarantee">Гарантия</a><a href="#contacts">Контакты</a></span></div></div>
